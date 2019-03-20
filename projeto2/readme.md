@@ -102,4 +102,5 @@ function setLuxText(resp,lux) {
 ```
 ### Passo 5 - Acompanhar as alterações na página que você criou e publicar essa página no githubpages ou outra plataforma de hospedagem como https://br.000webhost.com; 
 
+Exemplos em execução: https://aquilesburlamaqui.000webhostapp.com/iot/thingspeak_android.html
 
