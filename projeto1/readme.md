@@ -5,7 +5,7 @@
 Utilizar o tutorial https://www.w3schools.com/ para aprender a linguagem de marcação HTML. Através dessa linguagem é possível construir páginas para a web.
 
 Abra um editor de texto qualquer (notepad, bloco de notas, geanny, kate, codeblock) crie um arquivo chamado index.html com o seguinte conteúdo:
-```
+```HTML
  <!DOCTYPE html>
 <html>
   <head>
