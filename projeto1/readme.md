@@ -65,7 +65,7 @@ https://thingspeak.com/
 ### Passo 5 - Criar canal no ThingSpeak
 Uma vez que tenhamos criado uma conta no site ThingSpeak, devemos logar no sistema e criar um Canal.
 Para esse projeto, criaremos um canal chamado LUX. 
-Este canal exibirá informações de um sensor de luz(luminosidade e data em que dado foi coletado).
+Este canal exibirá informações de um sensor de luz(luminosidade e data em que o dado foi coletado).
 Devemos habilitar o mesmo para que tenha acesso público.
 
 ### Passo 5 - Compartilhar canal e Adicionar iframe do serviço na página html criada; 
