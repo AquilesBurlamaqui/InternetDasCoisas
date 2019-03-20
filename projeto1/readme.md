@@ -19,6 +19,7 @@ Abra um editor de texto qualquer (notepad, bloco de notas, geanny, kate, codeblo
   </body>
 </html> 
 ```
+Lembrar de salvar o arquivo como: index.html
 
 ### Passo 2 - Utilizar outros comandos do HTML
 Aprender as tags básicas do HTML ( html, head, body, title, h1, a href, image)
