@@ -18,5 +18,10 @@ Abra um editor de texto qualquer (notepad, bloco de notas, geanny, kate, codeblo
 
   </body>
 </html> 
-
 ```
+
+### Passo 2 - Utilizar outros comandos do HTML
+Aprender as tags básicas do HTML ( html, head, body, title, h1, a href, image)
+
+### Passo 3 - Incluir outras mídias via tag <iframe> 
+Incluir serviços de outros sites dentro de sua página (Incluir videos do youtube, usando a tag iframe)
