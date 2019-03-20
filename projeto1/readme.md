@@ -60,23 +60,27 @@ Incluir serviços de outros sites dentro de sua página (Incluir videos do youtu
 </html> 
 ```
 ### Passo 4 - Criar conta no ThingSpeak
+https://thingspeak.com/
 
 ### Passo 5 - Criar canal no ThingSpeak
+Uma vez que tenhamos criado uma conta no site ThingSpeak, devemos logar no sistema e criar um Canal.
+Para esse projeto, criaremos um canal chamado LUX. 
+Este canal exibirá informações de um sensor de luz(luminosidade e data em que dado foi coletado).
+Devemos habilitar o mesmo para que tenha acesso público.
 
 ### Passo 5 - Compartilhar canal e Adicionar iframe do serviço na página html criada; 
 ```HTML
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Projeto 1 - Thingspeak</title>
+		<title>Projeto 1 - Página com Thingspeak </title>
 		<meta charset="utf-8">
   </head>
 	<body>
 	
 	<h1>Thingspeak</h1>
 
-  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709914/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+  	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709914/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 	</body>
 </html> 
 ```
