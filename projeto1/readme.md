@@ -119,7 +119,7 @@ Onde o Zero no final do link deve ser substituido pelo valor gerado pela funçã
 
   <h1>Praticando Javascript com Iot</h1>
   <p>De 3 em 3 segundos enviando número randomico para o thinkspeak</p>
-  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709914/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=daily&type=line"></iframe>
+  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709914/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
   </body>
 </html>
 ```
