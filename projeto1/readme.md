@@ -64,6 +64,22 @@ Incluir serviços de outros sites dentro de sua página (Incluir videos do youtu
 ### Passo 5 - Criar canal no ThingSpeak
 
 ### Passo 5 - Compartilhar canal e Adicionar iframe do serviço na página html criada; 
+```HTML
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Projeto 1 - Thingspeak</title>
+		<meta charset="utf-8">
+  </head>
+	<body>
+	
+	<h1>Thingspeak</h1>
+
+  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709914/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+	</body>
+</html> 
+```
 
 ### Passo 6 - Criar uma função que gere informações randômicas para alimentar o canal do thingspeak via api rest fornecida pelo Canal;
 
