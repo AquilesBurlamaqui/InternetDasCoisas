@@ -123,5 +123,5 @@ Onde o Zero no final do link deve ser substituido pelo valor gerado pela funçã
   </body>
 </html>
 ```
-Exemplo funcionando: https://aquilesburlamaqui.000webhostapp.com/thingspeak.html
+Exemplo funcionando: https://aquilesburlamaqui.000webhostapp.com/iot/thingspeak.html
 
