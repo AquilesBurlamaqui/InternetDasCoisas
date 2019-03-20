@@ -91,7 +91,7 @@ function sns_OnChange( lux )
 
 function sendToAPI() {
   const http = new XMLHttpRequest()
-  http.open("GET", "https://api.thingspeak.com/update?api_key=OYUIUNJVJ995AK6C&field1="+luxGlobal)
+  http.open("GET", "GET https://api.thingspeak.com/update?api_key=NDJBSRPGPHIRZPTB&field1="+luxGlobal)
   http.send()
   http.onload = setLuxText(http.responseText, luxGlobal)
 }
@@ -100,4 +100,6 @@ function setLuxText(resp,lux) {
     txt.SetText( resp +" level = " + lux + " lux" );
 }
 ```
-### Passo 5 - Acompanhar as alterações na página que você criou e publicar essa página no githubpages ou outra plataforma de hospedagem (https://br.000webhost.com) ; 
+### Passo 5 - Acompanhar as alterações na página que você criou e publicar essa página no githubpages ou outra plataforma de hospedagem como https://br.000webhost.com; 
+
+
