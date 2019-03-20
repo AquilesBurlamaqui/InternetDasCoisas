@@ -86,5 +86,10 @@ Devemos habilitar o mesmo para que tenha acesso público.
 ```
 
 ### Passo 6 - Criar uma função que gere informações randômicas para alimentar o canal do thingspeak via api rest fornecida pelo Canal;
+Para resolver o passo 6 precisamos criar um código javascript que gere número randomicos que simulem os dados capturados de um sensor de luz. Esse dados gerados deverão ser enviados para GET https://api.thingspeak.com/update?api_key=OYUIUNJVJ995AK6C&field1=0 
+Onde o Zero no final do link deve ser substituido pelo valor gerado pela função.
+```javascript
 
+
+```
 
