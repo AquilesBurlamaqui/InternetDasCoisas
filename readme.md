@@ -18,7 +18,7 @@ Tutorial md https://guides.github.com/features/mastering-markdown/
 
 - Jilcimar
 - Vinícius
-- Vitor
-- Maria Emanuele
-- Rafael Neves
+
+- Bruno
+
 
