@@ -183,8 +183,8 @@ Criação de arquivo chamado graficos.php que desenha um gráfico usando a bilio
       }
  
       var jsonData = $.ajax({
-        url: \'https://aquilesburlamaqui.000webhostapp.com/api.php/lux_sensor\',
-        dataType: \'json\',
+        url: 'https://aquilesburlamaqui.000webhostapp.com/api.php/lux_sensor',
+        dataType: 'json',
       }).done(function (results) {
         console.log(results);
         // Split timestamp and data into separate arrays
@@ -213,7 +213,7 @@ Criação de arquivo chamado graficos.php que desenha um gráfico usando a bilio
         var ctx = document.getElementById("myLineChart").getContext("2d");
  
         var myLineChart = new Chart(ctx, {
-          type: \'line\',
+          type: 'line',
           data: tempData
         });
       });
