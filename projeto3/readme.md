@@ -14,8 +14,15 @@ id8850089_db_iot 	id8850089_db_iot 	localhost
   - O PhpMyadmin é um sistema web que te ajudar a gerenciar o banco de dados.
 - No menu lateral, escolha o seu bando, ex: d8850089_db_iot
 - Procure no contéudo centra a função Create table, ela possui um formulário para entrada do nome
-  - Esse formulário pede o nome da tabela a ser criada
--
+  - Esse formulário pede o nome da tabela a ser criada e o número de colunas.
+  - Coloque o nome: lux_sensor e colunas 3 e clique em GO/IR
+- Primeiro campo: id:INT - index:PRIMARY - AI:MARQUE (aperto em GO quando se surgir a janela popup)
+- Segundo campo: valor:INT
+- Terceiro campo: data:timestamp - Default:CURRENT_TIMES
+- Aperte SAVE
+
+Sua tabela estará criada. Ela armazenará 3 informações. Um identificador único(como se fosse um CPF para cada dado, de modo que ele possa ser diferenciado dos demais, por isso dizemos que ele é PRIMARY-não se repete, e AI-autoincremento sera organizado como se fosse um contador. O primeiro valor será 1, o segundo 2, e assim por diante) 
+ 
 
 ### Passo 2 - Criar um código php para receber os dados e inserir no banco;
 
