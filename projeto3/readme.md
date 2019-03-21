@@ -28,10 +28,84 @@ Sua tabela estará criada. Ela armazenará 3 informações. Um identificador ún
  - Aparecerá vários campos para entrada de dados. Preencha somente um dos campos, o referente a valor. Coloque qualquer valos, por exemplo 50. Não precisa colocar o id (pois ele sera incrementado automaticamente), nem precisar colocar a data (pois ele sera preencido com a hora do sistema)
  #### 2.6 Clique em BROWSE para verificar se o valor que você entrou esta armazenado. Ele deve listar todos os valores armazenados nesta tabela desse banco;
 
-### Passo 2 - Criar um código php para receber os dados e inserir no banco;
+### Passo 3 - Criar um código php para receber os dados e inserir no banco;
 
-### Passo 3 - Criar um código php para recuperar os dados do banco;
+```php
+<?php
+error_reporting(~E_WARNING & ~E_NOTICE);
+ 
+  $servername = "localhost";
+  $username = "id8850089_db_iot";
+  $password = "q1w2e3r4t5y6";
+  $dbname = "id8850089_db_iot";
+ 
+// get the HTTP method, path and body of the request
+$method = $_SERVER['REQUEST_METHOD'];
+$request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
+$input = json_decode(file_get_contents('php://input'),true);
+ 
+// connect to the mysql database
+$link = mysqli_connect($servername, $username, $password, $dbname);
+mysqli_set_charset($link,'utf8');
+ 
+// retrieve the table and key from the path
+$table = preg_replace('/[^a-z0-9_]+/i','',array_shift($request));
+$key = array_shift($request)+0;
+ 
+// escape the columns and values from the input object
+$columns = preg_replace('/[^a-z0-9_]+/i','',array_keys($input));
+$values = array_map(function ($value) use ($link) {
+  if ($value===null) return null;
+  return mysqli_real_escape_string($link,(string)$value);
+},array_values($input));
+ 
+// build the SET part of the SQL command
+$set = '';
+for ($i=0;$i<count($columns);$i++) {
+  $set.=($i>0?',':'').'`'.$columns[$i].'`=';
+  $set.=($values[$i]===null?'NULL':'"'.$values[$i].'"');
+}
+ 
+// create SQL based on HTTP method
+switch ($method) {
+  case 'GET':
+    $sql = "select * from `$table`".($key?" WHERE id=$key":''); break;
+  case 'PUT':
+    $sql = "update `$table` set $set where id=$key"; break;
+  case 'POST':
+    $sql = "insert into `$table` set $set"; break;
+  case 'DELETE':
+    $sql = "delete `$table` where id=$key"; break;
+}
+ 
+// excecute SQL statement
+$result = mysqli_query($link,$sql);
+ 
+// die if SQL statement failed
+if (!$result) {
+  http_response_code(404);
+  die(mysqli_error());
+}
+ 
+// print results, insert id or affected row count
+if ($method == 'GET') {
+  if (!$key) echo '[';
+  for ($i=0;$i<mysqli_num_rows($result);$i++) {
+    echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
+  }
+  if (!$key) echo ']';
+} elseif ($method == 'POST') {
+  echo mysqli_insert_id($link);
+} else {
+  echo mysqli_affected_rows($link);
+}
+ 
+// close mysql connection
+mysqli_close($link);
+```
 
-### Passo 4 - Criar um código em php para exibir como um gráfico os dados recebidos;
+### Passo 4 - Criar um código php para recuperar os dados do banco;
+
+### Passo 5 - Criar um código em php para exibir como um gráfico os dados recebidos;
 
 
