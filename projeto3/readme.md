@@ -16,7 +16,7 @@ id8850089_db_iot 	id8850089_db_iot 	localhost
 - Procure no contéudo centra a função Create table, ela possui um formulário para entrada do nome
   - Esse formulário pede o nome da tabela a ser criada e o número de colunas.
   - Coloque o nome: lux_sensor e colunas 3 e clique em GO/IR
-- Primeiro campo: id:INT - index:PRIMARY - AI:MARQUE (aperto em GO quando se surgir a janela popup)
+- Primeiro campo: id:INT - index:PRIMARY - AI:MARQUE (Se surgir uma janela popup, aperto em G) para confirmar que id é chave primária)
 - Segundo campo: valor:INT
 - Terceiro campo: data:timestamp - Default:CURRENT_TIMES
 - Aperte SAVE
