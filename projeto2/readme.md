@@ -57,7 +57,7 @@ function sns_OnChange( lux )
   luxGlobal = lux;
 }
 function setLuxText() {
-    txt.SetText(" level = " + lux + " luxGlobal" );
+    txt.SetText(" level = " + luxGlobal + " luxGlobal" );
 }
 ```
 
