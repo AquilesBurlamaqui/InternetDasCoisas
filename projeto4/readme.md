@@ -10,8 +10,8 @@
 #include <ESP8266HTTPClient.h>
  
 /* Set these to your desired credentials. */
-const char *ssid = "aquiles";  //ENTER YOUR WIFI SETTINGS
-const char *password = "udtqcssondodt";
+const char *ssid = "nomedaredewifi";  //ENTER YOUR WIFI SETTINGS
+const char *password = "senhadowifi";
  
 //Web/Server address to read/write from 
 const char *host = "api.thingspeak.com";   //https://circuits4you.com website or IP address of server
