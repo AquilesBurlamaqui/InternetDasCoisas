@@ -4,7 +4,7 @@
 Sugestão de criar a conta no serviço  https://br.000webhost.com 
 
 ### Passo 2 - Criar um banco de dados(mysql) para armazenar os dados do sensor;
-- No  https://br.000webhost.com  ir em Database Manager e criar new Database
+#### 2.1 No  https://br.000webhost.com  ir em Database Manager e criar new Database
   - Um banco de dados será criado com informações como:
 ```
 DB Name 	DB User 	DB Host 	 
