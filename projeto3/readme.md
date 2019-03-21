@@ -113,6 +113,9 @@ mysqli_close($link);
 
 ### Passo 4 - Criar um código php para recuperar os dados do banco;
 
+O presente arquivo iot.php,  exibe uma listagem simples dos dados da tabela criada.
+Para isso ele utiliza a linguagem SQL. A linguagem SQL é utilizada para gerenciamento de bancos de dados. 
+
 ```php
 <html>
  
