@@ -160,7 +160,6 @@ if ($method == 'GET') {
 mysqli_close($link);
 ```
 
-
 ### Passo 5 - Criar um código em php para exibir como um gráfico os dados recebidos;
 
 Criação de arquivo chamado graficos.php que desenha um gráfico usando a bilioteca javascript https://www.chartjs.org/
@@ -224,8 +223,13 @@ Criação de arquivo chamado graficos.php que desenha um gráfico usando a bilio
   </body>
 </html>
 ```
+Exemplo em funcionamento: https://aquilesburlamaqui.000webhostapp.com/iot/grafico.html
+
 
 ### Passo 6 - Alimentar o banco de dados com dados do sensor do android
+
+Atualizar do código no app droidscript em seu dispositivo android. 
+Desta vez o código envia um POST com a informação do sensor do celular
 
 ```php
 luxGlobal = 0;
