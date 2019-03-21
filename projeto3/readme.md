@@ -12,7 +12,7 @@ id8850089_db_iot 	id8850089_db_iot 	localhost
 ```
 - Entre em Manage - para gerenciar o seu banco de dados criado, escolha PhpMyAdmin; 
   - O PhpMyadmin é um sistema web que te ajudar a gerenciar o banco de dados.
-- No menu lateral, escolha o seu bando, ex: d8850089_db_iot
+- No menu lateral, escolha o seu banco, ex: d8850089_db_iot
 - Procure no contéudo centra a função Create table, ela possui um formulário para entrada do nome
   - Esse formulário pede o nome da tabela a ser criada e o número de colunas.
   - Coloque o nome: lux_sensor e colunas 3 e clique em GO/IR
