@@ -1,10 +1,11 @@
 # Projeto 3 - Substituição do ThingSpeak por sistema web e banco de dados
 
-1. No presente projeto iremos criar um banco de dados, dentro desse banco criaremos uma tabela chamda lux_sensor;
-1. A tabela lux_sensor armazenará os dados enviados pelo sensor do celular;
-1. Criaremos um arquivo chamado api.php responsável por liberar o acesso a tabela criada via métodos http
-1. Criaremos um arquivo chamado graficos.php que desenha um gráfico usando a bilioteca javascript https://www.chartjs.org/ 
-1. Faremos o aplicativos droidscript enviar chamadas via POST informando os novos valores informados pelos sensor do celular;
+1. No presente projeto iremos criar um banco de dados, dentro desse banco criaremos uma tabela chamda lux_sensor - Passo 1
+1. A tabela lux_sensor armazenará os dados enviados pelo sensor do celular - Passo 2
+1. Criaremos um arquivo chamado iot.php introduzindo como a linguagem SQL pode ser utilizada pra listar elementos de um banco de dados via comando SELECT * FROM lux_sensor; - Passo 3
+1. Criaremos um arquivo chamado api.php responsável por liberar o acesso a tabela criada via métodos http - Passo 4
+1. Criaremos um arquivo chamado graficos.php que desenha um gráfico usando a bilioteca javascript https://www.chartjs.org/ - Passo 5
+1. Faremos o aplicativos droidscript enviar chamadas via POST informando os novos valores informados pelos sensor do celular - Paso 6
 
 ### Passo 1 - Criar conta em site que ofereça serviço de hospedagem, PHP e banco de dados Mysql
 Sugestão de criar a conta no serviço  https://br.000webhost.com 
@@ -34,7 +35,55 @@ Sua tabela estará criada. Ela armazenará 3 informações. Um identificador ún
  - Aparecerá vários campos para entrada de dados. Preencha somente um dos campos, o referente a valor. Coloque qualquer valos, por exemplo 50. Não precisa colocar o id (pois ele sera incrementado automaticamente), nem precisar colocar a data (pois ele sera preencido com a hora do sistema)
  #### 2.6 Clique em BROWSE para verificar se o valor que você entrou esta armazenado. Ele deve listar todos os valores armazenados nesta tabela desse banco;
 
-### Passo 3 - Criar um código php que permita o envio e recuperação de informações da tabela via APIS (métodos htt - get, post, put, delete);
+### Passo 3 - Criar um código php para recuperar os dados do banco;
+
+O presente arquivo iot.php,  exibe uma listagem simples dos dados da tabela criada.
+Para isso ele utiliza a linguagem SQL. A linguagem SQL é utilizada para gerenciamento de bancos de dados. 
+
+```php
+<html>
+ 
+  <head>
+    <title>IoT ECT</title>
+  </head>
+  <body>
+    <?php
+      $servername = "localhost";
+      $username = "id8850089_db_iot";
+      $password = "q1w2e3r4t5y6";
+      $dbname = "id8850089_db_iot";
+ 
+      // Create connection
+      $conn = new mysqli($servername, $username, $password,$dbname);
+ 
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+ 
+      $sql = "SELECT * FROM lux_sensor";
+      $result = $conn->query($sql);
+ 
+      if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+              echo "Lux: " . $row["valor"]." Data:". $row["data"]."<br>";
+          }
+      } else {
+          echo "0 results";
+      }
+      $conn->close();
+    ?>
+    <a href="thingspeak.html">Grafico - Thingspeak</a></br>
+    <a href="grafico.html">Grafico - Graph.js</a></br>
+    <a href="index.html">Voltar</a>
+   
+  </body>
+</html>
+
+```
+
+### Passo 4 - Criar um código php que permita o envio e recuperação de informações da tabela via APIS (métodos htt - get, post, put, delete);
 
 Criação do arquivo api.php
 ```php
@@ -111,52 +160,6 @@ if ($method == 'GET') {
 mysqli_close($link);
 ```
 
-### Passo 4 - Criar um código php para recuperar os dados do banco;
-
-O presente arquivo iot.php,  exibe uma listagem simples dos dados da tabela criada.
-Para isso ele utiliza a linguagem SQL. A linguagem SQL é utilizada para gerenciamento de bancos de dados. 
-
-```php
-<html>
- 
-  <head>
-    <title>IoT ECT</title>
-  </head>
-  <body>
-    <?php
-      $servername = "localhost";
-      $username = "id8850089_db_iot";
-      $password = "q1w2e3r4t5y6";
-      $dbname = "id8850089_db_iot";
- 
-      // Create connection
-      $conn = new mysqli($servername, $username, $password,$dbname);
- 
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
- 
-      $sql = "SELECT * FROM lux_sensor";
-      $result = $conn->query($sql);
- 
-      if ($result->num_rows > 0) {
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-              echo "Lux: " . $row["valor"]." Data:". $row["data"]."<br>";
-          }
-      } else {
-          echo "0 results";
-      }
-      $conn->close();
-    ?>
-    <a href="thingspeak.html">Grafico - Thingspeak</a></br>
-    <a href="grafico.html">Grafico - Graph.js</a></br>
-    <a href="index.html">Voltar</a>
-   
-  </body>
-</html>
-```
 
 ### Passo 5 - Criar um código em php para exibir como um gráfico os dados recebidos;
 
