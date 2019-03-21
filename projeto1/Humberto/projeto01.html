@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IoT ECT</title>
+    <script>
+        var count=1;
+        function sendToAPI(lux) {
+          count=count+Math.floor(Math.random() * 50);    
+          const http = new XMLHttpRequest()
+          http.open("GET", "https://api.thingspeak.com/update?api_key=N0ILTNDX2VNQ11O6&field1="+lux)
+          http.send()
+          http.onload = console.log(http.responseText+" "+lux)
+        }
+        
+        setInterval( function() { sendToAPI(count) }, 3000);
+        
+    </script>
+  </head>
+         
+  <body>
+
+  <h1>Praticando Javascript com Iot</h1>
+  <p></p>
+  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709918/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+  </body>
+</html>
