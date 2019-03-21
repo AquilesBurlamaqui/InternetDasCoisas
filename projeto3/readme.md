@@ -23,6 +23,9 @@ id8850089_db_iot 	id8850089_db_iot 	localhost
 
 Sua tabela estará criada. Ela armazenará 3 informações. Um identificador único(como se fosse um CPF para cada dado, de modo que ele possa ser diferenciado dos demais, por isso dizemos que ele é PRIMARY-não se repete, e AI-autoincremento sera organizado como se fosse um contador. O primeiro valor será 1, o segundo 2, e assim por diante) 
  
+ - Ainda utilizando o phpmyadmin, e ja com sua tabela criada, tente inserir um dado via interface do phpmyadmin. 
+  - Selecione a tabela no menu lateral, e no menu superior, escolha INSERT;
+  - Aparecerá vários campos para entrada de dados. Preencha somente um dos campos, o referente a valor. Coloque qualquer valos, por exemplo 50. Não precisa colocar o id (pois ele sera incrementado automaticamente), nem precisar colocar a data (pois ele sera preencido com a hora do sistema)
 
 ### Passo 2 - Criar um código php para receber os dados e inserir no banco;
 
