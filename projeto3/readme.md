@@ -26,6 +26,7 @@ Sua tabela estará criada. Ela armazenará 3 informações. Um identificador ún
  - Ainda utilizando o phpmyadmin, e ja com sua tabela criada, tente inserir um dado via interface do phpmyadmin. 
   - Selecione a tabela no menu lateral, e no menu superior, escolha INSERT;
   - Aparecerá vários campos para entrada de dados. Preencha somente um dos campos, o referente a valor. Coloque qualquer valos, por exemplo 50. Não precisa colocar o id (pois ele sera incrementado automaticamente), nem precisar colocar a data (pois ele sera preencido com a hora do sistema)
+  - Clique em BROWSE para verificar se o valor que você entrou esta armazenado. Ele deve listar todos os valores armazenados nesta tabela desse banco;
 
 ### Passo 2 - Criar um código php para receber os dados e inserir no banco;
 
