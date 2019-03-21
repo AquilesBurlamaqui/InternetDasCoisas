@@ -163,6 +163,7 @@ mysqli_close($link);
 
 ### Passo 5 - Criar um código em php para exibir como um gráfico os dados recebidos;
 
+Criação de arquivo chamado graficos.php que desenha um gráfico usando a bilioteca javascript https://www.chartjs.org/
 ```php
 <!DOCTYPE html>
 <html>
