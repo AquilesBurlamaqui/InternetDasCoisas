@@ -1,5 +1,11 @@
 # Projeto 3 - Substituição do ThingSpeak por sistema web e banco de dados
 
+* No presente projeto iremos criar um banco de dados, dentro desse banco criaremos uma tabela chamda lux_sensor;
+* A tabela lux_sensor armazenará os dados enviados pelo sensor do celular;
+* Criaremos um arquivo chamado api.php responsável por liberar o acesso a tabela criada via métodos http
+* Criaremos um arquivo chamado graficos.php que desenha um gráfico usando a bilioteca javascript https://www.chartjs.org/ 
+* Faremos o aplicativos droidscript enviar chamadas via POST informando os novos valores informados pelos sensor do celular;
+
 ### Passo 1 - Criar conta em site que ofereça serviço de hospedagem, PHP e banco de dados Mysql
 Sugestão de criar a conta no serviço  https://br.000webhost.com 
 
