@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Sensor Lux - IOT</title>
+    <script>
+		var count=1;
+		function sendToAPI(lux) {
+		  count=count+10;	
+		  const http = new XMLHttpRequest()
+		  http.open("GET", "https://api.thingspeak.com/update?api_key=FBGN1JZ3DSB2JILJ&field1="+lux)
+		  http.send()
+		  http.onload = console.log(http.responseText+" "+lux)
+		}
+		
+        //setInterval( function() { sendToAPI(count) }, 3000);
+        
+    </script>
+
+  <body>
+    <h1> Primeira prática da disciplina </h1>
+
+    <h4>Gráfico do sensor</h4>
+    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709912/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+LUX&type=line"></iframe>
+
+  </body>
+</html>
+
