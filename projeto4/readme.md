@@ -5,7 +5,7 @@
 
 ### Passo 2 - Montar Circuito com NODEMCU e sensor de luminosidade(LDR)
 
-### Passo 3 - Código que captura dados do sensor e envia para o thinspeak
+### Passo 3 - Código que captura dados do sensor e envia para o thingspeak
 
 ```c++
 
