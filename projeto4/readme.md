@@ -13,12 +13,12 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
  
-/* Set these to your desired credentials. */
-const char *ssid = "suarede";  //ENTER YOUR WIFI SETTINGS
+/* Configuração das credenciais - rede */
+const char *ssid = "suarede";  //Entre com as configurações da sua wifi
 const char *password = "suasenha";
  
-//Web/Server address to read/write from 
-const char *host = "https://api.thingspeak.com";   //website or IP address of server
+
+const char *host = "https://api.thingspeak.com";   //site ou ip
  
 //=======================================================================
 //                    Power on setup
