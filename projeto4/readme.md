@@ -8,18 +8,17 @@
 ### Passo 3 - Código que captura dados do sensor e envia para o thingspeak
 
 ```c++
-
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
  
 /* Set these to your desired credentials. */
-const char *ssid = "nomedaredewifi";  //ENTER YOUR WIFI SETTINGS
-const char *password = "senhadowifi";
+const char *ssid = "suarede";  //ENTER YOUR WIFI SETTINGS
+const char *password = "suasenha";
  
 //Web/Server address to read/write from 
-const char *host = "api.thingspeak.com";   //https://circuits4you.com website or IP address of server
+const char *host = "https://api.thingspeak.com";   //website or IP address of server
  
 //=======================================================================
 //                    Power on setup
@@ -64,7 +63,7 @@ void loop() {
   //GET Data
   //GET https://api.thingspeak.com/update?api_key=540QGLZMYPB8U2M4&field1=0
   getData = "?api_key=540QGLZMYPB8U2M4&field1=" + ADCData; 
-  Link = "api.thingspeak.com/update" + getData;
+  Link = "http://api.thingspeak.com/update" + getData;
   
   http.begin(Link);     //Specify request destination
   Serial.println(Link); 
@@ -78,5 +77,4 @@ void loop() {
   
   delay(5000);  //GET Data at every 5 seconds
 }
-
 ```
