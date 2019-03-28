@@ -1,4 +1,6 @@
 # Projeto 4 - Utilização do NODEMCU+sensores em substituição dos sensores do celular
+### Passo 0 - Preparar o Ambiente Arduino - IDE
+Adicionar em preferencias->URL adicionais para gerenciamento de placas : http://arduino.esp8266.com/versions/2.5.0/package_esp8266com_index.json
 
 
 ### Passo 1 - Executar Blink no NODEMCU ESP 
