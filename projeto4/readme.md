@@ -2,6 +2,18 @@
 
 
 ### Passo 1 - Executar Blink no NODEMCU ESP 
+```C++
+void setup() {
+// Define o pino 13 como saida
+pinMode(2, OUTPUT);
+}
+void loop() {
+digitalWrite(2, HIGH); // Acende o Led
+delay(3000); // Aguarda 1 segundo
+digitalWrite(2, LOW); // Apaga o Led
+delay(3000); // Aguarda 1 segundo
+}
+```
 
 ### Passo 2 - Montar Circuito com NODEMCU e sensor de luminosidade(LDR)
 
