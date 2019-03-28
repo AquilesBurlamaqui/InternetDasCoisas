@@ -6,9 +6,13 @@ function OnStart()
 	lay = app.CreateLayout( "linear", "VCenter,FillXY" );	
 
 	//Create a text label and add it to layout.
-	txt = app.CreateText( "Medindo Lux", 0.8, 0.3 );
+	txt = app.CreateText( "", 0.8, 0.3 );
+	txt2 = app.CreateText( "", 0.8, 0.3 );
+	
 	txt.SetTextSize( 32 );
 	lay.AddChild( txt );
+	txt2.SetTextSize(32);
+	lay.AddChild( txt2 );
 	
 	//Add layout to app.	
 	app.AddLayout( lay );
@@ -16,21 +20,21 @@ function OnStart()
 	sns = app.CreateSensor("Light");
 	sns.SetOnChange(sns_OnChange);
 	sns.Start();
-	setInterval(sendToAPI,10000)
+	setInterval(sendToAPI,3000)
 }
 
 
 function sns_OnChange(lux)
 {
     luxGlobal=lux;
+    txt.SetText("level= " + lux + " lux");
 }
 
-    function sendToApi (){
-    txt.SetText("Lux atual = " + lux + " lux");
+    function sendToAPI (){
           const http = new XMLHttpRequest()
           http.open("GET", "https://api.thingspeak.com/update?api_key=03VLNYXHEGNGGZOD&field1="+luxGlobal)
           http.send()
-          http.onload = txt.SetText("Enviado = " + luxGlobal + " lux");
+          http.onload = txt2.SetText("Enviado = " + luxGlobal + " lux");
         }
         
    
