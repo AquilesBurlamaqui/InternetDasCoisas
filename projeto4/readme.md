@@ -2,6 +2,9 @@
 ### Passo 0 - Preparar o Ambiente Arduino - IDE
 Adicionar em preferencias->URL adicionais para gerenciamento de placas : http://arduino.esp8266.com/versions/2.5.0/package_esp8266com_index.json
 
+Link com tutorial para instalar a placa ESP e programas iniciais para a placa
+https://www.filipeflop.com/blog/programar-nodemcu-com-ide-arduino/
+
 
 ### Passo 1 - Executar Blink no NODEMCU ESP 
 ```C++
