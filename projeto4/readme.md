@@ -4,14 +4,14 @@
 ### Passo 1 - Executar Blink no NODEMCU ESP 
 ```C++
 void setup() {
-// Define o pino 13 como saida
+// Define o pino 2 como saida
 pinMode(2, OUTPUT);
 }
 void loop() {
 digitalWrite(2, HIGH); // Acende o Led
-delay(3000); // Aguarda 1 segundo
+delay(3000); // Aguarda 3 segundo
 digitalWrite(2, LOW); // Apaga o Led
-delay(3000); // Aguarda 1 segundo
+delay(3000); // Aguarda 3 segundo
 }
 ```
 
