@@ -23,8 +23,8 @@ delay(3000); // Aguarda 3 segundo
 ### Passo 2 - Montar Circuito com NODEMCU e sensor de luminosidade(LDR)
 
  ![nodemcu](20190404_082450.jpg)
- ![nodemcu](20190404_082451.jpg)
- ![nodemcu](20190404_082452.jpg)
+ ![nodemcu](20190404_082505.jpg)
+ ![nodemcu](20190404_082520.jpg)
  
  
  
