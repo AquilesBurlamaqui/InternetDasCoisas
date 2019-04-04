@@ -12,7 +12,8 @@ Tutorial md https://guides.github.com/features/mastering-markdown/
 * Projeto 3 - [Substituição do ThingSpeak por sistema web e banco de dados](projeto3/readme.md)
 * Projeto 4 - [Utilização do NODEMCU+sensores em substituição dos sensores do celular](projeto4/readme.md)
 * Projeto 5 - [Utilização do protocolo MQTT (Usando Broker na Nuvem).](projeto5/readme.md)
-* projeto 6 - [Node-Red](projeto6/readme.md)
+* Projeto 6 - [Node-Red](projeto6/readme.md)
+* [Projetos Finais - ](projetosfinais/readme.md)
 
 
 ## Contribuidores 
