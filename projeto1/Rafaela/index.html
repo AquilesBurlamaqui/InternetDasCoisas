@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Projeto 1 - Página com Thingspeak </title>
-		<meta charset="utf-8">
-    
-
+  <head>
+    <title>IoT ECT</title>
     <script>
-        //váriavel global
-        var count=1;
-        //função para envio de dados para o thinkspeak
-        function sendToAPI(lux) {
-         
-          count=count+10; 
-          const http = new XMLHttpRequest()
-          
-          http.open("GET", "https://api.thingspeak.com/update?api_key=OYUIUNJVJ995AK6C&field1="+lux)
-          
-          http.send()
-          
-          http.onload = console.log(http.responseText+" "+lux)
-        }   
-        
+		var count=1;
+		function sendToAPI(lux) {
+		  count=count+10;	
+		  const http = new XMLHttpRequest()
+		  http.open("GET", "https://api.thingspeak.com/update?api_key=ELQMV16KD9KTQQ6S&field1="+lux)
+		  http.send()
+		  http.onload = console.log(http.responseText+" "+lux)
+		}
+		
         setInterval( function() { sendToAPI(count) }, 3000);
         
     </script>
   </head>
-	<body>
-	
-	<h1>Thingspeak</h1>
+         
+  <body>
 
-  	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/736822/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-
-	</body>
-</html> 
+  <h1>Praticando Javascript com Iot</h1>
+  <p>De 3 em 3 segundos enviando número randomico para o thinkspeak</p>
+  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/709959/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+  </body>
+</html>
