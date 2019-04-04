@@ -23,6 +23,11 @@ delay(3000); // Aguarda 3 segundo
 ### Passo 2 - Montar Circuito com NODEMCU e sensor de luminosidade(LDR)
 
  ![nodemcu](20190404_082450.jpg)
+ ![nodemcu](20190404_082451.jpg)
+ ![nodemcu](20190404_082452.jpg)
+ 
+ 
+ 
 
 ### Passo 3 - Código que captura dados do sensor e envia para o thingspeak
 
