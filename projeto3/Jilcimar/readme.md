@@ -3,11 +3,11 @@
 ## Prints da aplicação:
 
 - Home (Página inicial)
-<p align="center"><img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/Jilcimar/prints/home.png" width="350px"></p>
+<p align="center"><img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/Jilcimar/prints/home.png" width="600px"></p>
 
 - Gráfico recuperando os valores do banco de dados (salvos a partir do sensor do celular)
 
-<p align="center"><img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/Jilcimar/prints/grafico.png" width="350px"></p>
+<p align="center"><img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/Jilcimar/prints/grafico.png" width="600px"></p>
 
 ## Especificações do projeto
  - Versão do PHP: 7.1
