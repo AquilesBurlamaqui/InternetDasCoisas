@@ -1,7 +1,5 @@
 # Projeto 3 - Substituição do ThingSpeak por sistema web e banco de dados
 
-## Prints da aplicação:
-
 - Home (Página inicial)
 <p align="center"><img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/Jilcimar/prints/home.png" width="600px"></p>
 
