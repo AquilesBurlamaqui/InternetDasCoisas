@@ -3,3 +3,5 @@
 
 [Sensor de Luz - LDR](ldr.md)
 
+[Sensor de Temperatura - Thermistor](thermistor.md)
+
