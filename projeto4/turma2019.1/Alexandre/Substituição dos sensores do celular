@@ -7,7 +7,7 @@
 #include <ESP8266HTTPClient.h>
  
 /* Configuração das credenciais - rede */
-const char *ssid = "UFRN_ECT";  //Entre com as configurações da sua wifi
+const char *ssid = "UFRN-ECT";  //Entre com as configurações da sua wifi
 const char *password = "";
  
 
