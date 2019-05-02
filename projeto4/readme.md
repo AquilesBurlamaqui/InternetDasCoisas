@@ -7,4 +7,4 @@
 
 ### Sensor de umidade
 
-[Sensor de umidade](umidade.md)
+[Sensor de umidade](Umidade.md)
