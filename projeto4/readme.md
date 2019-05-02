@@ -8,3 +8,6 @@
 ### Sensor de umidade
 
 [Sensor de umidade](Umidade.md)
+
+## Sensor de Água
+https://ltlemur04.wixsite.com/roboticnation/single-post/2017/12/10/Arduino-Water-Sensor-Set-Up-and-Programming
