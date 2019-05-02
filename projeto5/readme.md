@@ -21,8 +21,8 @@ No presente projeto, vamos utilizar um Broker, que disponibiliza tal serviço de
 #include <PubSubClient.h>
 
 //WiFi
-const char* SSID = "UFRN-ECT";                // SSID / nome da rede WiFi que deseja se conectar
-const char* PASSWORD = "F9517AFC";   // Senha da rede WiFi que deseja se conectar
+const char* SSID = "aquiles";                // SSID / nome da rede WiFi que deseja se conectar
+const char* PASSWORD = "suasenha";   // Senha da rede WiFi que deseja se conectar
 WiFiClient wifiClient;                        
  
 //MQTT Server
@@ -70,8 +70,8 @@ void conectaWiFi() {
   Serial.print(SSID);
   Serial.println("  Aguarde!");
 
-  //WiFi.begin(SSID, PASSWORD); // Conecta na rede WI-FI  
-  WiFi.begin(SSID); // Conecta na rede WI-FI  
+  WiFi.begin(SSID, PASSWORD); // Conecta na rede WI-FI  
+  //WiFi.begin(SSID); // Conecta na rede WI-FI  
   
   while (WiFi.status() != WL_CONNECTED) {
       delay(100);
@@ -101,13 +101,16 @@ void conectaMQTT() {
 }
 
 void enviaValores() {
+  Serial.println("  ### Envia valores");
   String ADCData;
   int adcvalue=analogRead(0);  //Read Analog value of LDR
   ADCData = String(adcvalue);   //String to interger conversion
-  Serial.println("value: "+adcvalue);
-  MQTT.publish(TOPIC_PUBLISH, "1");
+  Serial.println("value: "+ADCData);
+  const char* dados = ADCData.c_str();
+  MQTT.publish(TOPIC_PUBLISH, dados);
   delay(5000);  //GET Data at every 5 seconds
 }
+
 
 ```
 
