@@ -6,3 +6,5 @@
 [Sensor de Temperatura - Thermistor](thermistor.md)
 
 ### Sensor de umidade
+
+[Sensor de umidade](umidade.md)
