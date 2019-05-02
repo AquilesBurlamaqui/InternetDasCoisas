@@ -40,7 +40,7 @@ void conectaMQTT();     //Faz conexão com Broker MQTT
 void enviaPacote();     //
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   conectaWiFi();
   MQTT.setServer(BROKER_MQTT, BROKER_PORT);   
