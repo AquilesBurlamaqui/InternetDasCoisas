@@ -3,6 +3,8 @@
 
 [Sensor de Luz - LDR](ldr.md)
 
+### Sensor de Temperatura
+
 [Sensor de Temperatura - Thermistor](thermistor.md)
 
 ### Sensor de umidade
