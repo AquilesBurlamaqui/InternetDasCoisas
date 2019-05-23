@@ -25,6 +25,8 @@ Tutorial md https://guides.github.com/features/mastering-markdown/
 
 ## Dicas
   # Código para reset
+  
+``` C
   /*
  * circuits4you.com
  * ESP8266 software reset demo
@@ -60,4 +62,4 @@ void loop() {
     }
   }
 }
-  
+```
