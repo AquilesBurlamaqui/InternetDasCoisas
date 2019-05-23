@@ -55,3 +55,5 @@ void loop(void)
   }
 }
 ```
+
+Sem fotos por provável erro no sensor
