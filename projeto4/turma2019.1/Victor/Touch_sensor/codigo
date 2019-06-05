@@ -1,0 +1,41 @@
+float seno;
+int frequencia;
+void setup() {
+  pinMode(0,INPUT);
+  pinMode(14, OUTPUT);
+  pinMode(2, OUTPUT);
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+  digitalWrite(2, HIGH);
+  if(digitalRead(0)==HIGH){
+    digitalWrite(2, LOW);
+    Serial.print("Sensor is Touch ");
+    Serial.println();
+    for(int x=0;x<180;x++){
+    
+   
+  //converte graus para radiando e depois obtém o valor do seno
+  seno=(sin(x*3.1416/180));
+  //gera uma frequência a partir do valor do seno
+  frequencia = 2000+(int(seno*1000));
+  tone(14,frequencia);
+  delay(2);
+  
+  
+    if(digitalRead(0)==LOW)
+    {
+      noTone(14);
+       Serial.print("Sensor is not Touch ");
+       Serial.println();
+       digitalWrite(2, LOW);
+      break;
+     
+    }
+ }
+ 
+  }
+
+}
