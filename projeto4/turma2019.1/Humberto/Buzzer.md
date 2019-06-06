@@ -1,6 +1,11 @@
 # Documentação para utilização do blink interno e de um buzzer de 3 pinos
 
-Alimentação em 3v
+O Buzzer funciona basicamente da mesma forma que o blink interno.
+
+A função tone(Pino,Frequencia) define o pino digital e a frequência na qual o buzzer emitirá o som.
+
+Para silenciar o buzzer, utilizar a função noTone(Pino).
+
 
 ```
 void setup() {
