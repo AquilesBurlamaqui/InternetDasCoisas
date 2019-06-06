@@ -6,6 +6,7 @@ A função tone(Pino,Frequencia) define o pino digital e a frequência na qual o
 
 Para silenciar o buzzer, utilizar a função noTone(Pino).
 
+O codigo abaixo alterna o led interno entre aceso (3 segundos) e apagado (1s), sendo acompanhado pelo buzzer.
 
 ```
 void setup() {
@@ -20,6 +21,6 @@ delay(3000); // Aguarda 3 segundos
 
 digitalWrite(2, HIGH); // Apaga o Led
 noTone(16);
-delay(1000); // Aguarda 3 segundo
+delay(1000); // Aguarda 1 segundo
 }
 ```
