@@ -6,6 +6,8 @@
 // a umidade percentual medida para um canal do ThingSpeak. 
 
 
+<img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/152F4/production/_103927768_flat1000x1000075f.u2.jpg">
+
 #include <ESP8266WiFi.h>  
  
 //defines
