@@ -1,13 +1,13 @@
 # Sensor de umidade
 
-``` C++
-// O sensor é capaz de mensurar temperatura e umidade relativa da terra
-// O projeto Planta IoT com ESP8266 NodeMCU consiste em fazer o NodeMCU enviar, a cada trinta segundos, 
-// a umidade percentual medida para um canal do ThingSpeak. 
+O sensor é capaz de mensurar temperatura e umidade relativa da terra. O projeto Planta IoT com ESP8266 NodeMCU consiste em fazer o NodeMCU enviar, a cada trinta segundos, a umidade percentual medida para um canal do ThingSpeak. 
 
+<p align="center">
+ <img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.1/Alexandre/SensorUmidade.jpg" width="350" title="hover text">
+</p>
 
-<img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/152F4/production/_103927768_flat1000x1000075f.u2.jpg">
-
+  
+```
 #include <ESP8266WiFi.h>  
  
 //defines
@@ -151,5 +151,4 @@ void loop()
  
      delay(1000);
 }
-
 ```
