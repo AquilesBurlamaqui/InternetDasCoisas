@@ -120,4 +120,6 @@ Assisitir a playlist
 
 Como visualizar os dados enviados ao MQTT no navegardor:
 https://medium.com/@reese7long/turn-your-browser-into-an-mqtt-client-2b071d8d5b21
+ - > Código completo: github.com/reese-long/mqtt-browser-demo
+ 
 
