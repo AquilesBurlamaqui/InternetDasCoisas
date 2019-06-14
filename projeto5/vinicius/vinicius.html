@@ -1,0 +1,76 @@
+    
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+  <title>MQTT Vinícius</title>
+</head>
+
+<body>
+  <h1 id='tt'>Resposta Teclado: <span id='n'> </span></h1>
+
+  <script>
+    const client = new Paho.MQTT.Client("ws://iot.eclipse.org/ws", "ViniciusTava" + new Date().getTime());
+    const client2 = new Paho.MQTT.Client("ws://iot.eclipse.org/ws", "ViniciusTava2" + new Date().getTime());
+
+    const myTopic = "SensorVini";
+    const Topic = "RetornoVini"
+
+    document.body.onkeypress = tecla;
+    var tnome = 0;
+
+    function tecla(){
+      var tnome = event.key;
+      message = tnome;
+      publish(myTopic, message);  
+    }
+
+    client.onConnectionLost = onConnectionLost;
+    client2.onMessageArrived = onMessageArrived;
+    client.connect({ onSuccess: onConnect });
+    client2.connect({onSuccess : onConnect });
+    
+    const publish = (dest, msg) => {
+      console.log('desint :', dest, 'msggg', msg)
+      let message = new Paho.MQTT.Message(msg);
+      message.destinationName = dest;
+      client.send(message);
+    }
+
+    function onConnect() {
+      console.log("onConnect");
+      client2.subscribe(Topic);
+     // setInterval(() => { publish(myTopic, `${tnome}`) }, 10)
+      
+    }
+    
+    function onConnectionLost(responseObject) {
+      if (responseObject.errorCode !== 0) {
+        console.log("onConnectionLost:" + responseObject.errorMessage);
+      }
+      client.connect({ onSuccess: onConnect });
+    }
+
+
+    function onMessageArrived(message) {
+      let el = document.createElement('div')
+      el.innerHTML = message.payloadString
+      document.body.appendChild(el)
+      mudacor(message.payloadString);
+    }
+
+    function mudacor(teclacap){
+      if (isNaN(teclacap)){
+        if(teclacap.length >1){
+          document.getElementById("tt").style.color = teclacap;
+        }
+      }else{
+        document.getElementById("n").innerHTML = teclacap;
+      }
+    }
+  </script>
+  
+</body>
+</html>
