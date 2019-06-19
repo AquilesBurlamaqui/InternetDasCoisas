@@ -118,7 +118,7 @@ void enviaValores() {
 Assisitir a playlist
 [Introdução ao ESP e MQTT](https://www.youtube.com/playlist?list=PL7CjOZ3q8fMe6DxojEFuDx4BP0qbbpKtP)
 
-Como visualizar os dados enviados ao MQTT no navegardor:
+Como visualizar os dados enviados ao MQTT no navegador:
 https://medium.com/@reese7long/turn-your-browser-into-an-mqtt-client-2b071d8d5b21
  - Código completo: github.com/reese-long/mqtt-browser-demo
  
