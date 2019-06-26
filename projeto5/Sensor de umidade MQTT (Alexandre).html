@@ -2,18 +2,18 @@
 #include <PubSubClient.h> // Importa a Biblioteca PubSubClient  
  
 //defines
-//defines de id mqtt e tÛpicos para publicaÁ„o e subscribe
-#define TOPICO_SUBSCRIBE "MQTTFilipeFlopEnvia"     //tÛpico MQTT de escuta
-#define TOPICO_PUBLISH   "MQTTFilipeFlopRecebe"    //tÛpico MQTT de envio de informaÁıes para Broker
+//defines de id mqtt e t√≥picos para publica√ß√£o e subscribe
+#define TOPICO_SUBSCRIBE "MQTTFlopEnvia"     //t√≥pico MQTT de escuta
+#define TOPICO_PUBLISH   "MQTTFlopRecebe"    //t√≥pico MQTT de envio de informa√ß√µes para Broker
                                                    //IMPORTANTE: recomendamos fortemente alterar os nomes
-                                                   //            desses tÛpicos. Caso contr·rio, h· grandes
-                                                   //            chances de vocÍ controlar e monitorar o NodeMCU
+                                                   //            desses t√≥picos. Caso contr√°rio, h√° grandes
+                                                   //            chances de voc√™ controlar e monitorar o NodeMCU
                                                    //            de outra pessoa.
-#define ID_MQTT  "HomeAut"     //id mqtt (para identificaÁ„o de sess„o)
-                               //IMPORTANTE: este deve ser ˙nico no broker (ou seja, 
+#define ID_MQTT  "HomeAut"     //id mqtt (para identifica√ß√£o de sess√£o)
+                               //IMPORTANTE: este deve ser √∫nico no broker (ou seja, 
                                //            se um client MQTT tentar entrar com o mesmo 
-                               //            id de outro j· conectado ao broker, o broker 
-                               //            ir· fechar a conex„o de um deles).
+                               //            id de outro j√° conectado ao broker, o broker 
+                               //            ir√° fechar a conex√£o de um deles).
 
 
 // WIFI
@@ -26,10 +26,10 @@ const char* BROKER_MQTT = "iot.eclipse.org"; //URL do broker MQTT que se deseja 
 int BROKER_PORT = 1883; // Porta do Broker MQTT
  
  
-//Vari·veis e objetos globais
+//Vari√°veis e objetos globais
 WiFiClient espClient; // Cria o objeto espClient
 PubSubClient MQTT(espClient); // Instancia o Cliente MQTT passando o objeto espClient
-char EstadoSaida = '0';  //vari·vel que armazena o estado atual da saÌda
+char EstadoSaida = '0';  //vari√°vel que armazena o estado atual da sa√≠da
 
  
 //Prototypes
@@ -42,34 +42,34 @@ void VerificaConexoesWiFIEMQTT(void);
 void InitOutput(void);
  
 /*
- * ImplementaÁıes
+ * Implementa√ß√µes
  */ 
 
 void setup() 
 {
-    //inicializaÁıes:
+    //inicializa√ß√µes:
     InitOutput();
     initSerial();
     initWiFi();
     initMQTT();
 }
   
-//FunÁ„o: inicializa comunicaÁ„o serial com baudrate 115200 (para fins de monitorar no terminal serial 
-//        o que est· acontecendo.
-//Par‚metros: nenhum
+//Fun√ß√£o: inicializa comunica√ß√£o serial com baudrate 115200 (para fins de monitorar no terminal serial 
+//        o que est√° acontecendo.
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void initSerial() 
 {
     Serial.begin(115200);
 }
  
-//FunÁ„o: faz a conex„o WiFI
-//Par‚metros: nenhum
+//Fun√ß√£o: faz a conex√£o WiFI
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void FazConexaoWiFi(void)
 {
     client.stop();
-    Serial.println("Conectando-se ‡ rede WiFi...");
+    Serial.println("Conectando-se √† rede WiFi...");
     Serial.println();  
     delay(1000);
     WiFi.begin(SSID_REDE, SENHA_REDE);
@@ -88,19 +88,19 @@ void FazConexaoWiFi(void)
     delay(1000);
 }
   
-//FunÁ„o: inicializa par‚metros de conex„o MQTT(endereÁo do 
-//        broker, porta e seta funÁ„o de callback)
-//Par‚metros: nenhum
+//Fun√ß√£o: inicializa par√¢metros de conex√£o MQTT(endere√ßo do 
+//        broker, porta e seta fun√ß√£o de callback)
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void initMQTT() 
 {
     MQTT.setServer(BROKER_MQTT, BROKER_PORT);   //informa qual broker e porta deve ser conectado
-    MQTT.setCallback(mqtt_callback);            //atribui funÁ„o de callback (funÁ„o chamada quando qualquer informaÁ„o de um dos tÛpicos subescritos chega)
+    MQTT.setCallback(mqtt_callback);            //atribui fun√ß√£o de callback (fun√ß√£o chamada quando qualquer informa√ß√£o de um dos t√≥picos subescritos chega)
 }
 
-//FunÁ„o: reconecta-se ao broker MQTT (caso ainda n„o esteja conectado ou em caso de a conex„o cair)
-//        em caso de sucesso na conex„o ou reconex„o, o subscribe dos tÛpicos È refeito.
-//Par‚metros: nenhum
+//Fun√ß√£o: reconecta-se ao broker MQTT (caso ainda n√£o esteja conectado ou em caso de a conex√£o cair)
+//        em caso de sucesso na conex√£o ou reconex√£o, o subscribe dos t√≥picos √© refeito.
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void reconnectMQTT() 
 {
@@ -122,13 +122,13 @@ void reconnectMQTT()
     }
 }
   
-//FunÁ„o: reconecta-se ao WiFi
-//Par‚metros: nenhum
+//Fun√ß√£o: reconecta-se ao WiFi
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void reconectWiFi() 
 {
-    //se j· est· conectado a rede WI-FI, nada È feito. 
-    //Caso contr·rio, s„o efetuadas tentativas de conex„o
+    //se j√° est√° conectado a rede WI-FI, nada √© feito. 
+    //Caso contr√°rio, s√£o efetuadas tentativas de conex√£o
     if (WiFi.status() == WL_CONNECTED)
         return;
          
@@ -147,25 +147,25 @@ void reconectWiFi()
     Serial.println(WiFi.localIP());
 }
  
-//FunÁ„o: verifica o estado das conexıes WiFI e ao broker MQTT. 
-//        Em caso de desconex„o (qualquer uma das duas), a conex„o
-//        È refeita.
-//Par‚metros: nenhum
+//Fun√ß√£o: verifica o estado das conex√µes WiFI e ao broker MQTT. 
+//        Em caso de desconex√£o (qualquer uma das duas), a conex√£o
+//        √© refeita.
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void VerificaConexoesWiFIEMQTT(void)
 {
     if (!MQTT.connected()) 
-        reconnectMQTT(); //se n„o h· conex„o com o Broker, a conex„o È refeita
+        reconnectMQTT(); //se n√£o h√° conex√£o com o Broker, a conex√£o √© refeita
      
-     reconectWiFi(); //se n„o h· conex„o com o WiFI, a conex„o È refeita
+     reconectWiFi(); //se n√£o h√° conex√£o com o WiFI, a conex√£o √© refeita
 }
  
  
  
-//FunÁ„o: faz a leitura do nÌvel de umidade
-//Par‚metros: nenhum
+//Fun√ß√£o: faz a leitura do n√≠vel de umidade
+//Par√¢metros: nenhum
 //Retorno: umidade percentual (0-100)
-//ObservaÁ„o: o ADC do NodeMCU permite atÈ, no m·ximo, 3.3V. Dessa forma,
+//Observa√ß√£o: o ADC do NodeMCU permite at√©, no m√°ximo, 3.3V. Dessa forma,
 //            para 3.3V, obtem-se (empiricamente) 978 como leitura de ADC
 float FazLeituraUmidade(void)
 {
@@ -210,22 +210,22 @@ void setup()
 //loop principal
 void loop() 
 {   
-    //garante funcionamento das conexıes WiFi e ao broker MQTT
+    //garante funcionamento das conex√µes WiFi e ao broker MQTT
     VerificaConexoesWiFIEMQTT();
  
     //envia o status de todos os outputs para o Broker no protocolo esperado
     EnviaEstadoOutputMQTT();
  
-    //keep-alive da comunicaÁ„o com broker MQTT
+    //keep-alive da comunica√ß√£o com broker MQTT
     MQTT.loop();
 }
  
     UmidadePercentualLida = FazLeituraUmidade();
-    UmidadePercentualTruncada = (int)UmidadePercentualLida; //trunca umidade como n˙mero inteiro
+    UmidadePercentualTruncada = (int)UmidadePercentualLida; //trunca umidade como n√∫mero inteiro
      
     
-//FunÁ„o: envia ao Broker o estado atual do output 
-//Par‚metros: nenhum
+//Fun√ß√£o: envia ao Broker o estado atual do output 
+//Par√¢metros: nenhum
 //Retorno: nenhum
 void EnviaEstadoOutputMQTT(void)
 {
