@@ -1,0 +1,240 @@
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h> // Importa a Biblioteca PubSubClient  
+ 
+//defines
+//defines de id mqtt e tópicos para publicação e subscribe
+#define TOPICO_SUBSCRIBE "MQTTFilipeFlopEnvia"     //tópico MQTT de escuta
+#define TOPICO_PUBLISH   "MQTTFilipeFlopRecebe"    //tópico MQTT de envio de informações para Broker
+                                                   //IMPORTANTE: recomendamos fortemente alterar os nomes
+                                                   //            desses tópicos. Caso contrário, há grandes
+                                                   //            chances de você controlar e monitorar o NodeMCU
+                                                   //            de outra pessoa.
+#define ID_MQTT  "HomeAut"     //id mqtt (para identificação de sessão)
+                               //IMPORTANTE: este deve ser único no broker (ou seja, 
+                               //            se um client MQTT tentar entrar com o mesmo 
+                               //            id de outro já conectado ao broker, o broker 
+                               //            irá fechar a conexão de um deles).
+
+
+// WIFI
+const char* SSID = "SSID"; // SSID / nome da rede WI-FI que deseja se conectar
+const char* PASSWORD = "SENHA"; // Senha da rede WI-FI que deseja se conectar
+
+
+// MQTT
+const char* BROKER_MQTT = "iot.eclipse.org"; //URL do broker MQTT que se deseja utilizar
+int BROKER_PORT = 1883; // Porta do Broker MQTT
+ 
+ 
+//Variáveis e objetos globais
+WiFiClient espClient; // Cria o objeto espClient
+PubSubClient MQTT(espClient); // Instancia o Cliente MQTT passando o objeto espClient
+char EstadoSaida = '0';  //variável que armazena o estado atual da saída
+
+ 
+//Prototypes
+void initSerial();
+void initWiFi();
+void initMQTT();
+void reconectWiFi(); 
+void mqtt_callback(char* topic, byte* payload, unsigned int length);
+void VerificaConexoesWiFIEMQTT(void);
+void InitOutput(void);
+ 
+/*
+ * Implementações
+ */ 
+
+void setup() 
+{
+    //inicializações:
+    InitOutput();
+    initSerial();
+    initWiFi();
+    initMQTT();
+}
+  
+//Função: inicializa comunicação serial com baudrate 115200 (para fins de monitorar no terminal serial 
+//        o que está acontecendo.
+//Parâmetros: nenhum
+//Retorno: nenhum
+void initSerial() 
+{
+    Serial.begin(115200);
+}
+ 
+//Função: faz a conexão WiFI
+//Parâmetros: nenhum
+//Retorno: nenhum
+void FazConexaoWiFi(void)
+{
+    client.stop();
+    Serial.println("Conectando-se à rede WiFi...");
+    Serial.println();  
+    delay(1000);
+    WiFi.begin(SSID_REDE, SENHA_REDE);
+ 
+    while (WiFi.status() != WL_CONNECTED) 
+    {
+        delay(500);
+        Serial.print(".");
+    }
+ 
+    Serial.println("");
+    Serial.println("WiFi connectado com sucesso!");  
+    Serial.println("IP obtido: ");
+    Serial.println(WiFi.localIP());
+ 
+    delay(1000);
+}
+  
+//Função: inicializa parâmetros de conexão MQTT(endereço do 
+//        broker, porta e seta função de callback)
+//Parâmetros: nenhum
+//Retorno: nenhum
+void initMQTT() 
+{
+    MQTT.setServer(BROKER_MQTT, BROKER_PORT);   //informa qual broker e porta deve ser conectado
+    MQTT.setCallback(mqtt_callback);            //atribui função de callback (função chamada quando qualquer informação de um dos tópicos subescritos chega)
+}
+
+//Função: reconecta-se ao broker MQTT (caso ainda não esteja conectado ou em caso de a conexão cair)
+//        em caso de sucesso na conexão ou reconexão, o subscribe dos tópicos é refeito.
+//Parâmetros: nenhum
+//Retorno: nenhum
+void reconnectMQTT() 
+{
+    while (!MQTT.connected()) 
+    {
+        Serial.print("* Tentando se conectar ao Broker MQTT: ");
+        Serial.println(BROKER_MQTT);
+        if (MQTT.connect(ID_MQTT)) 
+        {
+            Serial.println("Conectado com sucesso ao broker MQTT!");
+            MQTT.subscribe(TOPICO_SUBSCRIBE); 
+        } 
+        else
+        {
+            Serial.println("Falha ao reconectar no broker.");
+            Serial.println("Havera nova tentatica de conexao em 2s");
+            delay(2000);
+        }
+    }
+}
+  
+//Função: reconecta-se ao WiFi
+//Parâmetros: nenhum
+//Retorno: nenhum
+void reconectWiFi() 
+{
+    //se já está conectado a rede WI-FI, nada é feito. 
+    //Caso contrário, são efetuadas tentativas de conexão
+    if (WiFi.status() == WL_CONNECTED)
+        return;
+         
+    WiFi.begin(SSID, PASSWORD); // Conecta na rede WI-FI
+     
+    while (WiFi.status() != WL_CONNECTED) 
+    {
+        delay(100);
+        Serial.print(".");
+    }
+   
+    Serial.println();
+    Serial.print("Conectado com sucesso na rede ");
+    Serial.print(SSID);
+    Serial.println("IP obtido: ");
+    Serial.println(WiFi.localIP());
+}
+ 
+//Função: verifica o estado das conexões WiFI e ao broker MQTT. 
+//        Em caso de desconexão (qualquer uma das duas), a conexão
+//        é refeita.
+//Parâmetros: nenhum
+//Retorno: nenhum
+void VerificaConexoesWiFIEMQTT(void)
+{
+    if (!MQTT.connected()) 
+        reconnectMQTT(); //se não há conexão com o Broker, a conexão é refeita
+     
+     reconectWiFi(); //se não há conexão com o WiFI, a conexão é refeita
+}
+ 
+ 
+ 
+//Função: faz a leitura do nível de umidade
+//Parâmetros: nenhum
+//Retorno: umidade percentual (0-100)
+//Observação: o ADC do NodeMCU permite até, no máximo, 3.3V. Dessa forma,
+//            para 3.3V, obtem-se (empiricamente) 978 como leitura de ADC
+float FazLeituraUmidade(void)
+{
+    int ValorADC;
+    float UmidadePercentual;
+ 
+     ValorADC = analogRead(0);   //978 -> 3,3V
+     Serial.print("[Leitura ADC] ");
+     Serial.println(ValorADC);
+ 
+     //Quanto maior o numero lido do ADC, menor a umidade.
+     //Sendo assim, calcula-se a porcentagem de umidade por:
+     //      
+     //   Valor lido                 Umidade percentual
+     //      _    0                           _ 100
+     //      |                                |   
+     //      |                                |   
+     //      -   ValorADC                     - UmidadePercentual 
+     //      |                                |   
+     //      |                                |   
+     //     _|_  978                         _|_ 0
+     //
+     //   (UmidadePercentual-0) / (100-0)  =  (ValorADC - 978) / (-978)
+     //      Logo:
+     //      UmidadePercentual = 100 * ((978-ValorADC) / 978)  
+      
+     UmidadePercentual = 100 * ((978-(float)ValorADC) / 978);
+     Serial.print("[Umidade Percentual] ");
+     Serial.print(UmidadePercentual);
+     Serial.println("%");
+ 
+     return UmidadePercentual;
+}
+void setup()
+{  
+    Serial.begin(9600);
+    lastConnectionTime = 0; 
+    FazConexaoWiFi();
+    Serial.println("Planta IoT com ESP8266 NodeMCU");
+}
+ 
+//loop principal
+void loop() 
+{   
+    //garante funcionamento das conexões WiFi e ao broker MQTT
+    VerificaConexoesWiFIEMQTT();
+ 
+    //envia o status de todos os outputs para o Broker no protocolo esperado
+    EnviaEstadoOutputMQTT();
+ 
+    //keep-alive da comunicação com broker MQTT
+    MQTT.loop();
+}
+ 
+    UmidadePercentualLida = FazLeituraUmidade();
+    UmidadePercentualTruncada = (int)UmidadePercentualLida; //trunca umidade como número inteiro
+     
+    
+//Função: envia ao Broker o estado atual do output 
+//Parâmetros: nenhum
+//Retorno: nenhum
+void EnviaEstadoOutputMQTT(void)
+{
+    if (EstadoSaida == '0')
+      MQTT.publish(TOPICO_PUBLISH, "D");
+ 
+    if (EstadoSaida == '1')
+      MQTT.publish(TOPICO_PUBLISH, "L");
+ 
+    Serial.println("- Estado da saida D0 enviado ao broker!");
+    delay(1000);
+}
