@@ -1,0 +1,40 @@
+const client = new Paho.MQTT.Client("ws://iot.eclipse.org/ws", "LDRect" + new Date().getTime());
+
+const myTopic = "temperatura";
+
+client.onConnectionLost = onConnectionLost;
+client.onMessageArrived = onMessageArrived;
+console.log("Iniciando...");
+client.connect({ onSuccess: onConnect });
+
+let count = 0;
+temp=getRndInteger(25, 42);
+function onConnect() {
+  console.log("onConnect");
+  client.subscribe(myTopic);
+  setInterval(() => { publish(myTopic, `${temp}`) }, 1000)
+
+}
+
+function onConnectionLost(responseObject) {
+  if (responseObject.errorCode !== 0) {
+    console.log("onConnectionLost:" + responseObject.errorMessage);
+  }
+  client.connect({ onSuccess: onConnect });
+}
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+const publish = (dest, msg) => {
+	temp=getRndInteger(25, 42);
+  console.log('desint :', dest, 'msggg', msg)
+  let message = new Paho.MQTT.Message(msg);
+  message.destinationName = dest;
+  client.send(message);
+}
+
+function onMessageArrived(message) {
+  let el = document.createElement('div')
+  el.innerHTML = message.payloadString
+  document.body.appendChild(el)
+}
