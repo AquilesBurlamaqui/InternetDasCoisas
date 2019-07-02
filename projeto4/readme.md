@@ -18,4 +18,6 @@ https://ltlemur04.wixsite.com/roboticnation/single-post/2017/12/10/Arduino-Water
 [Sensor Ultrasônico](Rafael/ultrasonic.md)
 
 ## Sensor infravermelho
-[Sensor infravermelho](Bruno/readme.md)
+[Sensor infravermelho](turma2019.1/Bruno/readme.md)
+
+
