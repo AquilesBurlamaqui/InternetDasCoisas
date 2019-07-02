@@ -16,3 +16,6 @@ https://ltlemur04.wixsite.com/roboticnation/single-post/2017/12/10/Arduino-Water
 
 ## Sensor de distância
 [Sensor Ultrasônico](Rafael/ultrasonic.md)
+
+## Sensor infravermelho
+[Sensor infravermelho](Bruno/readme.md)
