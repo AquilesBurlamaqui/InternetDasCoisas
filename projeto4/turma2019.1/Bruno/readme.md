@@ -1,21 +1,21 @@
 ## Fazer led piscar ao apertar um botão de um controle remoto
 
-	Com o IDE do Arduino configurado para executar os códigos referente ao ESP8266, Faça o download da biblioteca IRremoteESP8266-master e em seguida faça a instalação da mesma na IDE do Arduino.
+Com o IDE do Arduino configurado para executar os códigos referente ao ESP8266, Faça o download da biblioteca IRremoteESP8266-master e em seguida faça a instalação da mesma na IDE do Arduino.
 
 Componentes usados no projeto:
-    - ESP8266
-    - Cabo de dados USB
-    - 3 jumps fêmea-fêmea
-    - Um controle remoto
-    - Um receptor infravermelho
+	- ESP8266
+	- Cabo de dados USB
+	- 3 jumps fêmea-fêmea
+	- Um controle remoto
+	- Um receptor infravermelho
 
-	Os Jump fêmea são colocados no GND, VCC e OUT do receptor infravermelho e posteriormente inseridos nos pinos G, 3V e D6 no ESP8266.
+Os Jump fêmea são colocados no GND, VCC e OUT do receptor infravermelho e posteriormente inseridos nos pinos G, 3V e D6 no ESP8266.
 
-	Em seguida, será necessário carregar o código no NodeMCU. Conecte o cabo USB no seu NodeMCU e a outra ponta na porta USB do seu computador. Na IDE confira se a placa selecionada é o NodeMCU e se a porta COM selecionada é a correta.
+Em seguida, será necessário carregar o código no NodeMCU. Conecte o cabo USB no seu NodeMCU e a outra ponta na porta USB do seu computador. Na IDE confira se a placa selecionada é o NodeMCU e se a porta COM selecionada é a correta.
 
-	O código para testes está abaixo. Porém esse código é apenas para clonar as teclas do controle cujo deseja usar na aplicação. Logo,  basta copiar o mesmo, colar na IDE, salvar e carregar no NodeMCU:
+O código para testes está abaixo. Porém esse código é apenas para clonar as teclas do controle cujo deseja usar na aplicação. Logo,  basta copiar o mesmo, colar na IDE, salvar e carregar no NodeMCU:
 
-'''
+```
 #include <IRremoteESP8266.h> //INCLUSÃO DE BIBLIOTECA
 
 int RECV_PIN = 12; //PINO DIGITAL EM QUE O FOTORRECEPTOR ESTÁ CONECTADO - GPIO12 / PINO D6
@@ -61,13 +61,15 @@ void loop() {
     dump(&results);
     irrecv.resume(); //RECEBE O PRÓXIMO VALOR
   
-} '''
+}
 
-	Após o arquivo ser carregado abra o monitor serial da IDE e verifique se a taxa de velocidade no rodapé do monitor está configurada para 115200 bauds, caso não esteja faça a alteração. Aguarde 10 segundos e em seguida aponte o controle remoto que será clonado para o fotorreceptor IR que está conectado ao NodeMCU e aperte algum dos botões e aguarde o fotorreceptor IR capturar e informar os dados no monitor serial. Nesse projeto, ao apertar a tecla 1, 2 e 3, os valores de respostas foram 9716be3f, 3d9ae3f7 e 6182021b. Vale salientar que é bom clicar mais de uma vez na tecla para ter certeza no código dela, pois pode ocorrer erros durante a resposta do controle.
+```
 
-	Com os códigos dos botões desejados capturados, Agora será necessário colocá-los no código abaixo para fazer com que o LED pisque ao apertar o botão desejado. Nesse caso, ao apertar a tecla 1 o led fica aceso por 1s, caso aperte o botão 2, fica aceso por 2s e assim por diante.
+Após o arquivo ser carregado abra o monitor serial da IDE e verifique se a taxa de velocidade no rodapé do monitor está configurada para 115200 bauds, caso não esteja faça a alteração. Aguarde 10 segundos e em seguida aponte o controle remoto que será clonado para o fotorreceptor IR que está conectado ao NodeMCU e aperte algum dos botões e aguarde o fotorreceptor IR capturar e informar os dados no monitor serial. Nesse projeto, ao apertar a tecla 1, 2 e 3, os valores de respostas foram 9716be3f, 3d9ae3f7 e 6182021b. Vale salientar que é bom clicar mais de uma vez na tecla para ter certeza no código dela, pois pode ocorrer erros durante a resposta do controle.
 
-'''
+Com os códigos dos botões desejados capturados, Agora será necessário colocá-los no código abaixo para fazer com que o LED pisque ao apertar o botão desejado. Nesse caso, ao apertar a tecla 1 o led fica aceso por 1s, caso aperte o botão 2, fica aceso por 2s e assim por diante.
+
+```
 #include <IRremoteESP8266.h> //INCLUSÃO DE BIBLIOTECA
 
 int RECV_PIN = 12; //PINO DIGITAL EM QUE O FOTORRECEPTOR ESTÁ CONECTADO - GPIO12 / PINO D6
@@ -142,5 +144,5 @@ void loop() {
   
 
 }
- 
-'''
+
+```
