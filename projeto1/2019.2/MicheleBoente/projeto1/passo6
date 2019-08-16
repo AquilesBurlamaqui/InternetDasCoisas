@@ -11,16 +11,17 @@
           http.open("GET", "https://api.thingspeak.com/update?api_key=VF3OG48ATFZ397R7&field1=0"+lux)
           http.send()
           http.onload = console.log(http.responseText+" "+lux)
-        }   
-        setInterval( function() { sendToAPI(count) }, 3000);
+        }
+        //alterei o valor inicial de 3000 para 1000
+        setInterval( function() { sendToAPI(count) }, 1000);
         
     </script>
   </head>
          
   <body>
 
-  <h1>Praticando Javascript com Iot</h1>
-  <p>De 3 em 3 segundos enviando número randomico para o thinkspeak</p>
+  <h1>Praticando Javascript com Iot modificando o tempo sugerido</h1>
+  <p>A cada segundo será enviado número randomico para o thinkspeak</p>
   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839382/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
   </body>
 </html>
