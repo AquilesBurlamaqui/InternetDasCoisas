@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Projeto 1 - Página com Thingspeak </title>
+		<meta charset="utf-8">
+  </head>
+	<body>
+	
+	<h1>Thingspeak</h1>
+
+//foi alterado o numero do canal da instrução para o criado na minha ID 839382
+
+  	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839382/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+	</body>
+</html>
