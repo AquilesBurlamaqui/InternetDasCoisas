@@ -1,7 +1,7 @@
 #Projeto1
 
-Tomando como orientação as instruções dadas, iniciei o projeto conhecendo a linguagem html e script com codigo dado.
-Passo 1 - Criação de página HTML
+<p>Tomando como orientação as instruções dadas, iniciei o projeto conhecendo a linguagem html e script com codigo dado.</p>
+<p>Passo 1 - Criação de página HTML</p>
 Passo 2 - Utilizar outros comandos do HTML
 Passo 3 - Incluir outras mídias via tag
 Passo 4 - Criar conta no ThingSpeak
