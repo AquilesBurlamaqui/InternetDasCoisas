@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>#Projeto1</title>
-  </head>
- 
  <body>
+	<h1>#Projeto 1</h1>
 	<p>Tomando como orientação as instruções dadas, iniciei o projeto conhecendo a linguagem html e script com codigo dado.</p>
 	<p>Passo 1 - Criação de página HTML</p>
 	<p>Passo 2 - Utilizar outros comandos do HTML</p>
