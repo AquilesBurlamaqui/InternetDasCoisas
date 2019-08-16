@@ -3,9 +3,8 @@
  <body>
 	<h1>#Projeto 1</h1>
 	<p>Tomando como orientação as instruções dadas, iniciei o projeto conhecendo a linguagem html e script com codigo dado.</p>
-	<p>Passo 1 - Criação de página HTML</p>
-
-<html>
+	 <p>Passo 1 - Criação de página HTML</p>
+	 
   //inserindo um titulo da pagina
   <head>
       <title>Internet das Coisas</title>
