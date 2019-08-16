@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internet das Coisas</title>
+  </head>
+  <body>
+
+    <h1>Bem vindos ao meu primeiro site com IoT</h1>
+    <p>Em breve adicionarei informações de vários sensores</p>
+    
+    //adiconando um link na pagina
+    
+    <a href="http://www.google.com">Ir para página de busca</a>
+
+  </body>
+</html>
