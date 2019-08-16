@@ -1,6 +1,7 @@
 <html>
 	<head>
     <title>#Projeto1</title>
+	</head>
 
 <p>Tomando como orientação as instruções dadas, iniciei o projeto conhecendo a linguagem html e script com codigo dado.</p>
 <p>Passo 1 - Criação de página HTML</p>
@@ -11,3 +12,4 @@
 <p>Passo 6 - Criar uma função que gere informações randômicas para alimentar o canal do thingspeak via api rest fornecida pelo Canal</p>
 
 <a>https://mboente.000webhostapp.com
+</html>
