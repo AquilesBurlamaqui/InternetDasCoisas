@@ -5,7 +5,6 @@
 	<p>Tomando como orientação as instruções dadas, iniciei o projeto conhecendo a linguagem html e script com codigo dado.</p>
 	<p>Passo 1 - Criação de página HTML</p>
 
-<!DOCTYPE html>
 <html>
   //inserindo um titulo da pagina
   <head>
@@ -23,7 +22,6 @@
 
 	<p>Passo 2 - Utilizar outros comandos do HTML</p>
 
-<!DOCTYPE html>
 <html>
   <head>
     <title>Internet das Coisas</title>
@@ -43,7 +41,6 @@
 	<p>Passo 3 - Incluir outras mídias via tag</p>
 
     
-<!DOCTYPE html>
 <html>
   <head>
     <title>Internet das Coisas</title>
@@ -69,8 +66,6 @@ ID usuario: mixaboente
 
 	<p>Passo 5 - Compartilhar canal e Adicionar iframe do serviço na página html criada</p>
 
-    
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>Projeto 1 - Página com Thingspeak </title>
@@ -88,7 +83,6 @@ ID usuario: mixaboente
 
 	<p>Passo 6 - Criar uma função que gere informações randômicas para alimentar o canal do thingspeak via api rest fornecida pelo Canal</p>
 
-<!DOCTYPE html>
 <html>
   <head>
     <title>IoT ECT</title>
