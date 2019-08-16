@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internet das Coisas</title>
+  </head>
+  <body>
+
+    <h1>Bem vindos ao meu primeiro site com IoT</h1>
+    <p>Em breve adicionarei informações de vários sensores</p>
+    <a href="http://www.google.com">Ir para página de busca</a>
+    
+    //inserindo um video do youtube na pagina
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QSIPNhOiMoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </body>
+</html>
