@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  //inserindo um titulo da pagina
+  <head>
+      <title>Internet das Coisas</title>
+  </head>
+  //abrindo espaço para o corpo da pagina
+  <body>
+    //inserindo espaço para um subtitulo
+    <h1>Bem vindos ao meu primeiro site com IoT</h1>
+    //inserindo um novo paragrafo no texto da pagina
+    <p>Em breve adicionarei informações de vários sensores</p>
+
+  </body>
+</html> 
