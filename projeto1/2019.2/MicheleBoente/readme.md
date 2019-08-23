@@ -20,7 +20,7 @@
 <p>&lt;iframe width="400" height="300" src="https://www.youtube.com/embed/QSIPNhOiMoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</p>
 <p><em>width e height s&atilde;o as defini&ccedil;&otilde;es do tamanho do video em pixel</em><br /><em>src &eacute; o link do video entre " "</em><br /><em>frameborder &eacute; a borda do video</em></p>
 <p>EXEMPLO:</p>
-<p><iframe src="//www.youtube.com/embed/A5NW50cMuwo" width="536" height="300" allowfullscreen="allowfullscreen"></iframe></p>
+<iframe src="//www.youtube.com/embed/A5NW50cMuwo" width="536" height="300" allowfullscreen="allowfullscreen"></iframe>
 <h2>Passo 4 - Criar conta no ThingSpeak</h2>
 <p>criando conta no https://thingspeak.com/</p>
 <p>ID usuario criado: <strong>mixaboente</strong></p>
@@ -29,7 +29,7 @@
 <p>&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;<br /><em>titulo da pagina Projeto 1 - P&aacute;gina com Thingspeak</em>&nbsp;<br />/title&gt;<br />&lt;meta charset="utf-8"&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;h1&gt;<br />Titulo do Thingspeak<br />&lt;/h1&gt;<br />&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839382/charts/1?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15"&gt;&lt;/iframe&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</p>
 <p>EXEMPLO:</p>
 <h1>T&iacute;tulo do Thingspeak</h1>
-<p><iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839382/charts/1?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15" width="450" height="260"></iframe></p>
+<iframe style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839382/charts/1?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15" width="450" height="260"></iframe>
 <h2>Passo 6 - Criar uma fun&ccedil;&atilde;o que gere informa&ccedil;&otilde;es rand&ocirc;micas para alimentar o canal do thingspeak via api rest fornecida pelo Canal</h2>
 <p><em>* alterei o valor inicial dado nas orienta&ccedil;&otilde;es de 3000 para 1000</em></p>
 <p>&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;<br />Titulo da pagina<br />&lt;/title&gt;<br />&lt;script&gt;<br />var count=1;<br />function sendToAPI(lux) <br />{<br />count=Math.floor((Math.random() * 100) + 1);<br />const http = new XMLHttpRequest()<br />http.open("GET", "https://api.thingspeak.com/update?api_key=VF3OG48ATFZ397R7&amp;field1=0"+lux)<br />http.send()<br />http.onload = console.log(http.responseText+" "+lux)<br />}<br />setInterval( function() { sendToAPI(count) }, 1000); &lt;/script&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;h1&gt;<br />Titulo do Tingspeak<br />&lt;/h1&gt;<br />&lt;p&gt;<br />A cada segundo ser&aacute; enviado n&uacute;mero randomico para o thinkspeak<br />&lt;/p&gt;<br />&lt;iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839382/charts/1?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line"&gt;&lt; /iframe&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />&lt;/body&gt;</p>
