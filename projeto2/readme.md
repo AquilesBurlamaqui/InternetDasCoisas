@@ -49,7 +49,7 @@ function OnStart()
   sns.Start();
   setInterval(function(){
       txt.SetText(" level = " + luxGlobal + " luxGlobal");
-      }, 3000);
+      }, 10000);
   
 }
 
