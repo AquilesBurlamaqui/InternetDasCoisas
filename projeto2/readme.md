@@ -32,32 +32,31 @@ function sns_OnChange( lux )
 
 ```javascript
 luxGlobal = 0;
-//Chamada quando a aplicacao inicia
+function setLuxText() {
+    txt.SetText(" level = " + luxGlobal + " luxGlobal" +count);
+}
+
 function OnStart()
 {
-    //criar layout centralizados verticalmente
-    lay = app.CreateLayout( "linear", "VCenter,FillXY" );    
+  lay = app.CreateLayout( "Linear", "VCenter,FillXY" );
 
-    //criar label texto e adiciona ao layout
-    txt = app.CreateText( "Medindo lux" );
-    txt.SetTextSize( 32 );
-    lay.AddChild( txt );
-    
-    //adicionar o layout ao app    
-    app.AddLayout( lay );
-    
-    sns = app.CreateSensor( "Light" );
-    sns.SetOnChange( sns_OnChange );
-    sns.Start();
-    setInterval(setLuxText(), 10000);
+  txt = app.CreateText( "", 0.8, 0.3 );
+  lay.AddChild( txt );
+  app.AddLayout( lay );
+
+  sns = app.CreateSensor( "Light" );
+  sns.SetOnChange( sns_OnChange );
+  sns.Start();
+  setInterval(function(){
+      txt.SetText(" level = " + luxGlobal + " luxGlobal");
+      }, 3000);
+  
 }
 
 function sns_OnChange( lux )
 {
+  //txt.SetText( "level = " + lux + " lux" );
   luxGlobal = lux;
-}
-function setLuxText() {
-    txt.SetText(" level = " + luxGlobal + " luxGlobal" );
 }
 ```
 
