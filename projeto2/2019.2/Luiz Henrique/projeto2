@@ -19,7 +19,7 @@ function OnStart()
     sns = app.CreateSensor( "Accelerometer" );
     sns.SetOnChange( sns_OnChange );
     sns.Start();
-    setInterval(sendToAPI,30000);
+    setInterval(sendToAPI,10000);
 
 }
 
