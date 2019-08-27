@@ -6,6 +6,7 @@ Seguindo o tutorial disponibilizado, foi feito a adequação do exemplo, que era
 O código abaixo descreve bem a configuração feita para que o acelerômetro funcione:
 
 // Código utilizado //
+
 dirGlobal=0;
 
 function OnStart()
