@@ -48,7 +48,9 @@
 </html> 
 
 - Para hospedar o site criei uma conta no https://br.000webhost.com/;
--Meu site:
+- Meu site: https://fabiany.000webhostapp.com;
+
+*Passo 6
 
 
 
