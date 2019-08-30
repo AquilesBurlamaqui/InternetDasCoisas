@@ -1,8 +1,8 @@
 # Projeto 1 - Criação de Página HTML e exibição do gráfico ThingSpeak.
 
 * Conforme o passo a passo disponibilizado, comecei criando uma página html local. (Passo 1)
--- Editor utilizado: CodeBlocks;
--- Comandos básicos inseridos para a criação da página conforme abaixo;
+   Editor utilizado: CodeBlocks;
+   Comandos básicos inseridos para a criação da página conforme abaixo;
 
 <!DOCTYPE html>
 <html>
