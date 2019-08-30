@@ -26,8 +26,8 @@
 
 * Passo 4: Criar uma conta no ThingSpeak: https://thingspeak.com/ e criar um canal;
 
-- Conta no ThingSpeak: FabianyLopes
-- Canal criado: LUX
+Conta no ThingSpeak: FabianyLopes
+Canal criado: LUX
 
 * Passo 5: Compartilhar canal e Adicionar iframe do serviço na página html criada;
 
@@ -47,7 +47,8 @@
 	</body>
 </html> 
 
-  
+- Para hospedar o site criei uma conta no https://br.000webhost.com/;
+
 
 
 
