@@ -14,8 +14,10 @@ Sugestão de criar a conta no serviço  https://br.000webhost.com
 #### 2.1 No  https://br.000webhost.com  ir em Database Manager e criar new Database
   - Um banco de dados será criado com informações como:
 ```
-DB Name 	DB User 	DB Host 	 
-id8850089_db_iot 	id8850089_db_iot 	localhost
+DB Name: id8850089_db_iot
+DB User: id8850089_db_iot
+DB Host: localhost 	 
+ 	 	
 ```
 #### 2.2 Entre em Manage - para gerenciar o seu banco de dados criado, escolha PhpMyAdmin; 
  - O PhpMyadmin é um sistema web que te ajudar a gerenciar o banco de dados.
