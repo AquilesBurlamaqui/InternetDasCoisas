@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internet das Coisas</title>
+  </head>
+  <body>
+
+<script>
+dirGlobal=0;
+
+function OnStart()
+{
+    lay = app.CreateLayout( "Linear", "VCenter,FillXY" );
+
+    txt = app.CreateText( "", 0.8, 0.3, "Multiline" );
+    lay.AddChild( txt );
+    app.AddLayout( lay );
+
+    sns = app.CreateSensor( "Accelerometer" );
+    sns.SetOnChange( sns_OnChange );
+    sns.Start();
+    setInterval(sendToAPI,3000);
+
+}
+
+function sns_OnChange(x,y)
+{
+    dirGlobal=x;
+}
+
+function sendToAPI() {
+  const http = new XMLHttpRequest()
+  
+  //http.open("GET", "https://api.thingspeak.com/update?api_key=ZJL904XR0FKPBVQR&field1="+dirGlobal)
+  http.open("POST", "https://stravitzky.000webhostapp.com/api.php/lux_sensor");
+  http.setRequestHeader("Content-type", "application/json");
+  var data = JSON.stringify({"valor":""+dirGlobal});
+  http.send(data);
+  http.onload = setLuxText(http.responseText, dirGlobal)
+}
+
+function setLuxText(resp,x) {
+    txt.SetText( resp +" Aceleração x = " + x + " metros" );
+}
+</script>
+
+
+
+
+<p>A cada movimentação do celular no eixo x, é transmitido um valor de velocidade para o gráfico, que é gerado a partir do funcionamento do script de aceleração</p>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/846897/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+
+</body>
+</html>
