@@ -26,7 +26,7 @@ const char* PASSWORD = "suasenha";   // Senha da rede WiFi que deseja se conecta
 WiFiClient wifiClient;                        
  
 //MQTT Server
-const char* BROKER_MQTT = "iot.eclipse.org"; //URL do broker MQTT que se deseja utilizar
+const char* BROKER_MQTT = "mqtt.eclipse.org"; //URL do broker MQTT que se deseja utilizar
 int BROKER_PORT = 1883;                      // Porta do Broker MQTT
 
 #define ID_MQTT  "LDRect"            //Informe um ID unico e seu. Caso sejam usados IDs repetidos a ultima conexão irá sobrepor a anterior. 
