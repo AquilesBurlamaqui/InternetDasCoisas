@@ -1,7 +1,7 @@
 *Projeto 3*
 
 
-Nesse projeto foi criado um banco de dados no site WebHost para que fosse possível fazer uma substituição do gráfico gerado pelo ThingSpeak. Primeiramente, foi criado um banco de dados com o nome "iot" no próprio site, assim gerou um nome para o banco de dados: "id10448913_iot".
+Nesse projeto foi criado um banco de dados no site WebHost para que fosse possível fazer uma substituição do gráfico gerado pelo ThingSpeak. Primeiramente, foi criado um banco de dados com o nome "iot" no próprio site, assim gerou um nome para o banco de dados: *"id10448913_iot".*
 
 Nesse banco de dados, foi criado uma tabela para que fosse recebido e armazenado os valores do sensor.
 
