@@ -25,7 +25,8 @@ DB Host: localhost
 #### 2.4 Procure no contéudo centra a função Create table, ela possui um formulário para entrada do nome
  - Esse formulário pede o nome da tabela a ser criada e o número de colunas.
  - Coloque o nome: lux_sensor e colunas 3 e clique em GO/IR
-#### 2.5 Primeiro campo: id:INT - index:PRIMARY - AI:MARQUE (Se surgir uma janela popup, aperto em GO) para confirmar que id é chave primária (após fazer isso, um pequeno nome "Primary" aparecerá sob o Index).
+#### 2.5 Preencimento dos campos da tabela
+- Primeiro campo: id:INT - index:PRIMARY - AI:MARQUE (Se surgir uma janela popup, aperto em GO) para confirmar que id é chave primária (após fazer isso, um pequeno nome "Primary" aparecerá sob o Index).
 - Segundo campo: valor:INT
 - Terceiro campo: data:timestamp - Default:CURRENT_TIMES
 - Aperte SAVE
