@@ -1,1 +1,1 @@
-Relatorio do projeto 2
+No segundo projeto tive como objetivo enviar valores de algum sensor do celular para o site criado no projeto 1, escolhi usar o sensor de luz, baixei o droidScript, usa javaScript para captar as informaçoes dos sensores do celular, executei o codigo, a cada 10 segundos ele mostrava a luminosidade do local, depois para passar essas informaçoes para meu site, usei o thingspeak para mostrar o grafico no site.
