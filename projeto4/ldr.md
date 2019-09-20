@@ -103,3 +103,13 @@ void loop() {
   delay(5000);  //GET Data at every 5 seconds
 }
 ```
+
+# Executar o
+Para conectar em uma rede sem senha:
+```
+WiFi.begin(ssid, NULL)
+```
+ou
+```
+Wifi.begin(ssid)
+```
