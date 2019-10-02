@@ -5,3 +5,4 @@ Dentro do 000webhost.com (onde se encontra hospedado meu site) criamos um banco 
 
 Posteriormente, utilizamos o droidscript para gerar um codigo que irá usar os dados gerados pelos sensores do telefone para alimentar nosso gráfico(codigo .php)
 
+PS.:Os códigos estão em anexo.
