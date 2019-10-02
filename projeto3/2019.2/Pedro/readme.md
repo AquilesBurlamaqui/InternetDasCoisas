@@ -3,9 +3,7 @@ Dentro do 000webhost.com (onde se encontra hospedado meu site) criamos um banco 
 
 
 Posteriormente, utilizamos o droidscript para usar os dados gerados pelos sensores do telefone para alimentar nosso gráfico
-
->      
-luxGlobal = 0;
+>>luxGlobal = 0;
 //Chamada quando a aplicacao inicia
 function OnStart()
 {
