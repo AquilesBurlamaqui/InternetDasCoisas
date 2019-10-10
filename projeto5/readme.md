@@ -114,7 +114,7 @@ void enviaValores() {
 
 ```
 
-Código para o ESP32 - Placa Wemos com Bateria
+Código para o ESP32 - Placa Wemos com Bateria ligado a um sensor de Vibração na porta 23 (A cada vibracao ele desliga o led builtin e envia msg para o broker
 
 ``` C
 
