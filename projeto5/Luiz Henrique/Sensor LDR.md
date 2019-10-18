@@ -2,7 +2,8 @@ O código utilizado foi disponibilizado pelo tutorial.
 
 ```
 
-#include <ESP8266WiFi.h> #include <PubSubClient.h>
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h>
 
 //WiFi const char* SSID = "UFRN"; // SSID / nome da rede WiFi que deseja se conectar const char* PASSWORD = ""; // Senha da rede WiFi que deseja se conectar WiFiClient wifiClient;
 
