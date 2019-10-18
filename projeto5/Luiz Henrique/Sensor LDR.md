@@ -5,8 +5,7 @@ O código utilizado foi disponibilizado pelo tutorial.
 a
 
 
-´´´
-
+```
 
 
 A montagem do circuito LDR com o ESP8266-12E é mostrada abaixo na figura 01. 
