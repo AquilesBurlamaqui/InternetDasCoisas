@@ -49,7 +49,7 @@ void enviaValores() { Serial.println(" ### Envia valores"); String ADCData; int 
 
 A montagem do circuito LDR com o ESP8266-12E é mostrada abaixo na figura 01. 
 
-
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/Luiz%20Henrique/Circuito.jpeg)
 
 
 
