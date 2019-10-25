@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>ESP Server</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+</head><body><div class='container text-center mt-5'><h1><i class='fas fa-home'></i> IOT Light</h1>
+<h3 class='mt-4'>Status <button id='refresh' class='btn btn-outline-secondary rounded-0'>
+<i class='fas fa-redo'></i></button></h3><div id='light-on'><br><i class='fas fa-spin fa-sun text-warning'></i>
+<h1><i class='fas fa-lightbulb text-warning'></i></h1></div><div id='light-off'><br><i class='fas fa-sun'></i>
+<h1><i class='fas fa-lightbulb'></i></h1></div><br><button id='change' class='btn btn-dark px-4 rounded-0'>Led</button>
+</div><script src='https://code.jquery.com/jquery-3.4.1.min.js'></script><script>
+$('#light-on, #light-off').addClass('d-none');$('#change').click(function (e) {
+e.preventDefault();$.get('/led/change', function (data) {
+data.led == '1' ? $('#light-on').removeClass('d-none') : $('#light-on').addClass('d-none');
+data.led == '0' ? $('#light-off').removeClass('d-none') : $('#light-off').addClass('d-none');});});
+function ledStatus() {$.get('/led/status', function (data) {
+data.led == '1' ? $('#light-on').removeClass('d-none') : $('#light-on').addClass('d-none');
+data.led == '0' ? $('#light-off').removeClass('d-none') : $('#light-off').addClass('d-none');});  }
+$('#refresh').click(() => ledStatus());ledStatus();</script></body></html>
