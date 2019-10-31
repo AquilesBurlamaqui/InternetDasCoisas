@@ -28,7 +28,7 @@ __OBS: a alimentação de 3V fornecida pelo módulo ESP8266 também é suficient
 # Sensor de Presença + Motor de Vibração
 ![sensor + motor de vibração](https://i.imgur.com/D89rDxu.jpg)
 
-### O sensor de presença é usado normalmente em conjunto com outros dispositivos. Foi-se utilizado o motor de vibração para ser acionado em resposta à detecção de movimento obtida pelo sensor, com o seguinte código enviado para o ESP8266:
+### O sensor de presença é usado normalmente em conjunto com outros dispositivos. Foi-se utilizado o motor de vibração para ser acionado em resposta à detecção de movimento obtida pelo sensor, com o seguinte código enviado para o ESP8266 (microcontrolador com capacidade de comunicação por Wi-Fi):
 ```
 //Definição do pino de saída do sensor PIR
 #define PIN_SENSOR D6
@@ -42,10 +42,10 @@ void setup(){
 }
  
 void loop(){
-  //Faz a leitura do sensor de presença (retorna HIGH ou LOW)
-  bool sinal = digitalRead(PIN_SENSOR);
+  //Faz a leitura do sensor de presença (retorna 0 ou 1)
+  int sinal = digitalRead(PIN_SENSOR);
   
-  Serial.println(sinal);
+  Serial.println(sinal == 1);
   //HIGH : movimento detectado
   if (sinal){
     //aciona o motor
