@@ -1,0 +1,1 @@
+- Anteriormente usamos o celular como sensor para que pudessemos captar dados reais, agora nos foi apresentado o ESP, que funciona como um minisistema reprogramável que pode ser conectado com um sensor modular. Para usar o ESP precisamos criar um código com o formato Arduino e carregar no dispositivo. No momento, esse código está alimentando um canal do Thingspeak.
