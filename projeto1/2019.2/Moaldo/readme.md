@@ -9,4 +9,4 @@ diretamente na nossa página web criada anteriormente.
 
 Ao final deste projeto, foi possível dar os primeiros passos na criação de sites, scripts, no armazenamento e exibição de dados, 
 além de conhecer o ThingSpeak que é uma ótima ferramenta para quem está começando no mundo de IoT. Como resultado foram gerados
-dois arquivos
+dois arquivos, o primeiro [index.html](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto1/2019.2/Moaldo/index.html) que é a página principal do nosso site, o segundo arquivo [Projeto1.html](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto1/2019.2/Moaldo/Projeto1.html) é onde está o script que envia dados randômicos para o ThingSpeak e também cria e exibe o gráfico no nosso site.
