@@ -16,8 +16,8 @@ No final do projeto foram aprendidas várias novas tecnologias, a troca do Thing
 mais dados e realizar tratamento de informações de uma forma mais avançada e com mais detalhes. Ao se aprofundar um pouco mais
 em PHP e JS podemos criar ferramentas mais poderosas e completas. Os conhecimentos obtidos a partir da execução do projeto serão 
 muito importantes para a criação do projeto final.  
-Como resultado foi criado o arquivo [iot.php](url) que contem a forma de listagem simples dos dados, o arquivo [api.php](url)
-tem a API principal que envia e recupera os dados, o arquivo [graficos.php](url) contem o codigo capaz de exibir as informações
-em forma de gráfico, o arquivo [lux2.js](url) contem o programa para smartphone para enviar as informações do sensor para o banco 
+Como resultado foi criado o arquivo [iot.php](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/2019.2/Moaldo/iot.php) que contem a forma de listagem simples dos dados, o arquivo [api.php](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/2019.2/Moaldo/api.php)
+tem a API principal que envia e recupera os dados, o arquivo [graficos.php](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/2019.2/Moaldo/graficos.php) contem o codigo capaz de exibir as informações
+em forma de gráfico, o arquivo [lux2.js](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/2019.2/Moaldo/lux2.js.txt) contem o programa para smartphone para enviar as informações do sensor para o banco 
 de dados.  
 O resultado final é o [meu site](https://moaldoiot.000webhostapp.com/iot.php).
