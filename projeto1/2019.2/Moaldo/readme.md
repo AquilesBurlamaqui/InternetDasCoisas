@@ -8,4 +8,5 @@ Por fim, ensina a como criar um script utilizando JavaScript para enviar dados a
 diretamente na nossa página web criada anteriormente.
 
 Ao final deste projeto, foi possível dar os primeiros passos na criação de sites, scripts, no armazenamento e exibição de dados, 
-além de conhecer o ThingSpeak que é uma ótima ferramenta para quem está começando no mundo de IoT.
+além de conhecer o ThingSpeak que é uma ótima ferramenta para quem está começando no mundo de IoT. Como resultado foram gerados
+dois arquivos
