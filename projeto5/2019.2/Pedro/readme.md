@@ -101,7 +101,7 @@ void enviaValores() {
 }
 ```
 
-**Por meio do app MQTTool(IOS) foi possivel se inscrever no Topico(SensorECT) **
+**Por meio do app MQTTool(IOS) foi possivel se inscrever no Topico(SensorECT)**
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Pedro/Subscride.PNG)
 **Tambem foi possivel receber os dados enviados pela variação do switchButton(0 e 1)**
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Pedro/RecebeValoresSB.PNG)
