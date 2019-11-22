@@ -10,7 +10,7 @@ Introdução
 
 Desenvolvimento
 	
-  Primeiro instalei o DroidScript no celular,  depois utilizei o aplicativo para captura as informações do sensor, 
+       Primeiro instalei o DroidScript no celular,  depois utilizei o aplicativo para captura as informações do sensor, 
   escolhi usar o sensor de luz para perceber a variação da luminosidade do ambiente, medindo a cada 15 segundos, após
   a captura dos dados enviei para o thingSpeak gerar o grafico do sensor de 15 em 15 segundos, registrando a a intensidade
   de luz em função do tempo, depois que o grafico gerado corespondia com as medições, coloquei o gráfico do thingSpeak no 
@@ -18,6 +18,6 @@ Desenvolvimento
 
 Conclusão
 
-Nesse projeto aprendi o funcionamento do DoidScript e como ele consegue obter as informações de diversos sensores do celular,
+       Nesse projeto aprendi o funcionamento do DoidScript e como ele consegue obter as informações de diversos sensores do celular,
 como por exemplo, o acelerometro e o sensor de luz, usado no meu projeto. Como esperado os resultados obtidos na leitura do sensor
 foi condizente  com a medição do ambiente.
