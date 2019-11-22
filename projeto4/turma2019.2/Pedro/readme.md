@@ -1,0 +1,83 @@
+Neste projeto utilizamos uma placa ESP conectada a um sensor de luminosidade. 
+Por meio do software "Arduino" no pc, é possivel a comunicação com a placa ESP e assim conseguimos inserir as informações de Wi-Fi
+para que o a placa envie informações ao destino desejado, no caso para o Thingspeak.
+
+
+CODIGO
+
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h> 
+#include <ESP8266WebServer.h>
+#include <ESP8266HTTPClient.h>
+ 
+/* Configuração das credenciais - rede */
+const char *ssid = "Pedro Cavalcanti M.";  //Entre com as configurações da sua wifi
+const char *password = "123456790";
+ 
+
+const char *host = "https://api.thingspeak.com";   //site ou ip
+ 
+//=======================================================================
+//                    Power on setup
+//=======================================================================
+ 
+void setup() {
+  delay(1000);
+  Serial.begin(9600);
+  WiFi.mode(WIFI_OFF);        //Prevents reconnection issue (taking too long to connect)
+  delay(1000);
+  WiFi.mode(WIFI_STA);        //This line hides the viewing of ESP as wifi hotspot
+  
+  WiFi.begin(ssid, password);     //Connect to your WiFi router
+  Serial.println("");
+ 
+  Serial.print("Connecting");
+  // Wait for connection
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+ 
+  //If connection successful show IP address in serial monitor
+  Serial.println("");
+  Serial.print("Connected to ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());  //IP address assigned to your ESP
+}
+ 
+//=======================================================================
+//                    Main Program Loop
+//=======================================================================
+void loop() {
+  HTTPClient http;    //Declare object of class HTTPClient
+ 
+  String ADCData, station, getData, Link;
+  int adcvalue=analogRead(0);  //Read Analog value of LDR
+  ADCData = String(adcvalue);   //String to interger conversion
+  station = "B";
+ 
+  //GET Data
+  //GET https://api.thingspeak.com/update?api_key=1176CMZW9Y5XENRT&field1=0
+  getData = "?api_key=1176CMZW9Y5XENRT&field1=" + ADCData; 
+  Link = "http://api.thingspeak.com/update" + getData;
+  
+  http.begin(Link);     //Specify request destination
+  Serial.println(Link); 
+  int httpCode = http.GET();            //Send the request
+  String payload = http.getString();    //Get the response payload
+ 
+  Serial.println(httpCode);   //Print HTTP return code
+  Serial.println(payload);    //Print request response payload
+ 
+  http.end();  //Close connection
+  
+  delay(5000);  //GET Data at every 5 seconds
+}
+
+
+
+
+
+O sensor de luminosidade conectado a placa ESP verifica a intensidade da luz e envia o valor a cada 5 segundos, e
+esses valores são plotados no gráfico do Thingspeak, que está no meu site, que por sua vez esta hospedado no www.000webhost.com
