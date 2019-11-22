@@ -2,6 +2,7 @@
 //// falta terminar
 
 Introdução 	
+	
 	Este relatório é referente ao projeto 3, com o objetivo de modificar o projeto 2, que usava o serviço do thingSpeak para registrar os dados do cellular e gerar um gráfico, nesse projeto subistituimos o tingSpeak por um sistema web e banco de dados, para receber a informação do sensor, o banco de dados utilizado foi o mysql e o serviço web utilizado foi da 000Webhost.
 
 Desenvolvimento
