@@ -1,0 +1,110 @@
+    O projeto 2 foi desenvolvido com o intuído de no final desenvolver um sensor de celular que manda informações a uma plataforma 
+chamada ThingSpeak, essa terá por função produzir gráficos com os tais dados do sensor, explicarei o passo que fiz 
+para chegar em tais resultados.
+
+1° - Passo 
+O primeiro passo foi bem simples, só tive que baixar o aplicativo que mandaria as informações a plataforma ThingSpeak. 
+
+2° - Passo
+    O segundo passo foi desenvolver um código que captaria o valor da luz do ambiente, e mostraria no próprio aplicativo( celular)
+OBS: Esse código foi fornecido pelo próprio app
+
+-Aqui um exemplo do tal
+
+function OnStart()
+{
+  lay = app.CreateLayout( "Linear", "VCenter,FillXY" );
+
+  txt = app.CreateText( "", 0.8, 0.3 );
+  lay.AddChild( txt );
+  app.AddLayout( lay );
+
+  sns = app.CreateSensor( "Light" );
+  sns.SetOnChange( sns_OnChange );
+  sns.Start();
+
+}
+
+function sns_OnChange( lux )
+{
+  txt.SetText( "level = " + lux + " lux" );
+}
+
+3° - Passo 
+    O terceiro passo foi aprimorar esse código exemplificado acima, com a finalidade de o próprio mandar informações 
+    agora de 10 em 10 segundos, E não mais permanentemente.  
+
+-Aqui um exemplo do tal
+
+luxGlobal = 0;
+function setLuxText() {
+    txt.SetText(" level = " + luxGlobal + " luxGlobal" +count);
+}
+
+function OnStart()
+{
+  lay = app.CreateLayout( "Linear", "VCenter,FillXY" );
+
+  txt = app.CreateText( "", 0.8, 0.3 );
+  lay.AddChild( txt );
+  app.AddLayout( lay );
+
+  sns = app.CreateSensor( "Light" );
+  sns.SetOnChange( sns_OnChange );
+  sns.Start();
+  setInterval(function(){
+      txt.SetText(" level = " + luxGlobal + " luxGlobal");
+      }, 10000);
+  
+}
+
+function sns_OnChange( lux )
+{
+  //txt.SetText( "level = " + lux + " lux" );
+  luxGlobal = lux;
+}
+
+4° - e Ultimo Passo
+    Por fim o ultimo passo foi aprimorar mais ainda esse código apresentado, com o objetivo agora de ele enviar os dados a plataforma
+    
+ luxGlobal = 0;
+//Chamada quando a aplicacao inicia
+function OnStart()
+{
+    //criar layout centralizados verticalmente
+    lay = app.CreateLayout( "linear", "VCenter,FillXY" );    
+
+    //criar label texto e adiciona ao layout
+    txt = app.CreateText( "Medindo lux" );
+    txt.SetTextSize( 32 );
+    lay.AddChild( txt );
+    
+    //adicionar o layout ao app    
+    app.AddLayout( lay );
+    
+    sns = app.CreateSensor( "Light" );
+    sns.SetOnChange( sns_OnChange );
+    sns.Start();
+    setInterval(sendToAPI, 10000);
+}
+
+function sns_OnChange( lux )
+{
+  luxGlobal = lux;
+}
+
+function sendToAPI() {
+  const http = new XMLHttpRequest()
+  
+  http.open("GET", "https://api.thingspeak.com/update?api_key=WYQ5N2GLA1GPZOPL&field1="+luxGlobal)
+  http.send()
+  http.onload = setLuxText(http.responseText, luxGlobal)
+}
+
+function setLuxText(resp,lux) {
+    txt.SetText( resp +" level = " + lux + " lux" );
+}
+
+Por fim, aqui o link do resultado de todo processo em funcionamento
+
+https://thingspeak.com/channels/846914/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15
