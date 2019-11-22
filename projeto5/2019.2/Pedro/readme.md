@@ -1,9 +1,9 @@
 
-Neste experimento utilizamos o MQTT, que é umprotocolo de rede que permite a comunicação de 2 ou mais dispositivos por meio da internet
+Neste experimento utilizamos o MQTT, que é um protocolo de rede que permite a comunicação de 2 ou mais dispositivos por meio da internet
 e para isso é necessário um Broker que é responsável por receber e encaminhar as mensagens para todos os dispositivos que estão inscritos 
 para receber tais informações.
 
-No meu experimento utilizei o Broker Mosquitto (test.mosquitto.org), uma placa ESP, um switchButton para variar valores(0 e 1)
+No meu experimento utilizei o Broker Mosquitto (test.mosquitto.org), uma placa ESP8266 , um switchButton para variar valores(0 e 1)
 
 ```
 #include <ESP8266WiFi.h> 
