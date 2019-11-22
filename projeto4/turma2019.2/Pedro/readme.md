@@ -4,7 +4,7 @@ para que o a placa envie informações ao destino desejado, no caso para o Thing
 
 
 CODIGO
-
+'''
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
@@ -74,7 +74,7 @@ void loop() {
   
   delay(5000);  //GET Data at every 5 seconds
 }
-
+'''
 
 
 
