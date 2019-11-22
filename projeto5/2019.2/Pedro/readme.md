@@ -103,3 +103,7 @@ void enviaValores() {
 
 Por meio do app MQTTool(IOS) foi possivel se inscrever no Topico(SensorECT) e receber os dados enviados pela variação do switchButton
 (0 e 1) e tambem foi possivel enviar mensagens para o broker.
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Pedro/Subscride.PNG)
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Pedro/RecebeValoresSB.PNG)
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Pedro/EnviarMensagem.PNG)
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Pedro/RecebeValoresSubscribe.PNG)
