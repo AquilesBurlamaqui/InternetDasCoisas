@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Projeto 01 - LUX</title>
+        <script>
+            var cont = 1;
+        
+            function sendToAPI(lux) 
+            {
+                cont = cont+Math.floor((Math.random() * 100) + 2);    
+                const http = new XMLHttpRequest()
+                http.open("GET", "https://api.thingspeak.com/update?api_key=H04JUJLRROH4161F&field1="+lux)
+                http.send()
+                http.onload = console.log(http.responseText+" "+lux)
+            }
+        
+            setInterval( function() { sendToAPI(cont) }, 3000);
+        </script>
+    </head>
+
+    <body>
+
+        <h1> Thingspeak </h1>
+        <p>A cada 3000 milisegundos um valor é gerado e enviado</p>
+
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/839396/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&title=LUX+&type=spline&xaxis=Valor+X&yaxis=Valor+Y"></iframe>
+
+    </body>
+ 
+</html>
