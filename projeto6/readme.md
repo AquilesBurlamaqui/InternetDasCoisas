@@ -11,7 +11,7 @@ Exemplo de Conta criada:
 https://aquiles.mybluemix.net
 
 Após adicionar o catálogo do Node-RED, é necessário ativar o módulo, para iniciar devemos clicar na aba "Apps do Cloud Foundry" no painel inicial.
-![Alt Text](link).
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/painel.png).
 
 Entrando na listagem dos recursos disponíveis, iniciamos o módulo listado em "Apps do Cloud Foundry", que aparecerá o módulo a ser ativado para ser utilizado no Projeto 6
 
