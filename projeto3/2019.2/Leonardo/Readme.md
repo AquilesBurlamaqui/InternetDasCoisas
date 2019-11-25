@@ -9,4 +9,4 @@ Desenvolvimento
 
 Conclusão
 	
-	nesse projeto aprendi a  gerenciar banco de dados, enviar uma tabela com as informaçoes do banco para o site, gerando um gráfico em função do tempo.
+	Nesse projeto aprendi a  gerenciar banco de dados, enviar uma tabela com as informaçoes do banco para o site, gerando um gráfico em função do tempo.
