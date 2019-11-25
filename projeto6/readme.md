@@ -15,7 +15,7 @@ Após adicionar o catálogo do Node-RED, é necessário ativar o módulo, para i
 
 Entrando na listagem dos recursos disponíveis, iniciamos o módulo listado em "Apps do Cloud Foundry", que aparecerá o módulo a ser ativado para ser utilizado no Projeto 6
 
-![Alt Text]().
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/ativador.png).
 
 Em seguida, clique no nome do seu aplicativo para ser redirecionado para um novo cadastro.
 
