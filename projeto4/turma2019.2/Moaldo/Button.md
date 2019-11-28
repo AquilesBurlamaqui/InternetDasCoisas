@@ -14,7 +14,7 @@ https://www.filipeflop.com/blog/programar-nodemcu-com-ide-arduino/
 
 ```c++
 /*
- Este codigo tem a função de ler o estado de um botao conectado ao ESP32 e exibe o estado no monitor serial.
+ Este codigo tem a função de ler o estado de um botao conectado ao NodeMCU e exibir o estado no monitor serial.
 */
 
 // O pino D7 do NodeMCU corresponde ao pino 13 no Arduino, nele esta ligado o switch button; nomeamos ele
