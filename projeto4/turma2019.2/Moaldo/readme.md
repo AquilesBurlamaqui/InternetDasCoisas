@@ -7,7 +7,10 @@ https://www.filipeflop.com/blog/programar-nodemcu-com-ide-arduino/
 
 
 ### Passo 1 - Montar o circuito com o NodeMCU e o Switch Button
-![button]()
+Para esta montagem foi utilizado um módulo de Switch Button que contém dois resistores.
+![montagem1](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.2/Moaldo/montagem1.jpg)
+![montagem2](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.2/Moaldo/montagem2.jpg)
+![montagem3](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.2/Moaldo/montagem3.jpg)
 
 
 ### Passo 2 - Executar o seguinte código que verifica o estado do Switch Button
@@ -120,3 +123,5 @@ void loop() {
   delay(5000);  //GET Data at every 5 seconds
 }
 ```
+Desta forma, obtive o seguinte resultado no ThingSpeak:  
+![resultado](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.2/Moaldo/TS_button.PNG)
