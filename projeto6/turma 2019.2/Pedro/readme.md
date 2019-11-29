@@ -1,1 +1,1 @@
-
+**O Node-RED, é uma ferramenta visual de ambiente de código aberto, que inicialmente foi desenvolvida para implementar, criar e/ou conectar dispositivos de IoT, tendo sido estendida posteriormente para hardwares, APIs e web services.**
