@@ -4,8 +4,11 @@
 Primeiro utilizamos um Mqttin(que se inscreve no broker) e em seguida um nó Debug(que imprime na tela as mensagens recebidas)**
 
 **Nós de entrada e saida e ao lado as mensagens recebidas**
+
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/nodered.png)
-//**Publicando no broker**
-//![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/IMG_1865.PNG)
+**Publicando no broker**
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/IMG_1865.PNG)
 **Recebendo os dados do broker**
+
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/IMG_1866.PNG)
