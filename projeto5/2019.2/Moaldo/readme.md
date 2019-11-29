@@ -110,3 +110,13 @@ void enviaValores() {
   delay(5000);  //GET Data at every 5 seconds
 }
 ```
+### Visualizando os dados do tópico MQTT
+
+Utilizando o app para android MyMQTT, foi possivel se conectar no broker mosquitto e se inscrever no tópico buttonECT, assim
+exibindo os dados obtidos.  
+Conexão ao broker
+![conexao](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Moaldo/conexao.png)  
+Inscrito no tópico
+![topico](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Moaldo/topico.png)
+As mensagens do tópico
+![mensagens](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Moaldo/mensagensTopico.png)
