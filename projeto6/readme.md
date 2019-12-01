@@ -29,6 +29,14 @@ Continue pressionando em "Next" na página em que você foi redirecionado. Logo 
 
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/seuid.PNG).
 
+Finalize o cadastro e, na página em que será redirecionado, clique em "Go to your Node-RED flow editor" para acessar o seu editor do Node-RED.
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/noderedflow.PNG).
+
+Agora é só começar à desenvolver!
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/final.PNG).
+
 ## Testar exemplos
 https://cookbook.nodered.org/
 
