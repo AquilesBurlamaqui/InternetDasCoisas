@@ -21,6 +21,14 @@ Em seguida, clique no nome do seu aplicativo para ser redirecionado para um novo
 
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/iniciando.png).
 
+Após clicar no seu novo aplicativo, visite o url no qual você trabalhará com o Node Red clicando em "Visitar a URL do aplicativo".
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/urlapp.PNG).
+
+Continue pressionando em "Next" na página em que você foi redirecionado. Logo em seguida cadastre um nome e uma senha para o seu acesso, habilite a possibilidade de que outras pessoas vejam o editor, sem que alterem. Esta opção está localizada logo abaixo do campo "Password".
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/seuid.PNG).
+
 ## Testar exemplos
 https://cookbook.nodered.org/
 
