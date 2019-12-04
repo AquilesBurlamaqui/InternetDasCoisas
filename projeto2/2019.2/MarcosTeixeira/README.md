@@ -1,4 +1,4 @@
-# Projeto 02: Plotagem de gráfico com os dados do acelerômetro de smartphone android no ThingSpeak
+# Projeto 02: Plotagem de gráfico com os dados do acelerômetro de smartphone Android no ThingSpeak
 
 ### Conhecimentos necessários
 
