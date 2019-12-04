@@ -2,12 +2,12 @@
 
 ### Conhecimentos necessários
 
--Javascript
+- Javascript
 
 ### Ferramentas 
 
--Sublime Text 3
--DroidScript 
+- Sublime Text 3
+- DroidScript 
 
 ### Materiais 
--Smartphone Moto X4
+- Smartphone Moto X4
