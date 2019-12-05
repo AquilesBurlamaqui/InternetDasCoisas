@@ -64,51 +64,16 @@ Utilizando a referência do acelerômetro fizemos algumas alterações a fim de 
 ~~~javascript
 
 function OnStart()
-
-
-
-
 {
-
-
-  
-
-
    lay = app.CreateLayout( "Linear", "VCenter,FillXY" );   
-
-
-
-
-
-
-
    txt = app.CreateText( "Valor de X do acelerometro:" );
-
-
    lay.AddChild( txt );
-
-
    app.AddLayout( lay );
 
-
-
-
-
-
-
    sns = app.CreateSensor( "Accelerometer" );
-
-
    sns.SetOnChange( sns_OnChange );
-
-
    sns.Start();
-
-
    setInterval(sendToAPI, 10000);
-
-
 }
-
 ~~~
 
