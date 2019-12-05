@@ -44,8 +44,6 @@ Em seguida, foi criada um canal no thingspeak intitulado “Uso do sensor”.  O
     <head>
         <meta charset="utf-8">
         <title>Projeto 02</title>
-        <script>
-        </script>
     </head>
 
     <body>
@@ -59,6 +57,5 @@ Em seguida, foi criada um canal no thingspeak intitulado “Uso do sensor”.  O
     </body>
  
 </html>
-
 ~~~ 
 
