@@ -59,3 +59,56 @@ Em seguida, foi criada um canal no thingspeak intitulado “Uso do sensor”.  O
 </html>
 ~~~ 
 
+Utilizando a referência do acelerômetro fizemos algumas alterações a fim de enviar os dados para o thingspeak. A atualização dos dados do eixo x serão feitas a  cada 10 segundos, para isso, foi adicionada o método setInterval na função OnStart(). 
+
+~~~javascript
+
+function OnStart()
+
+
+
+
+{
+
+
+  
+
+
+   lay = app.CreateLayout( "Linear", "VCenter,FillXY" );   
+
+
+
+
+
+
+
+   txt = app.CreateText( "Valor de X do acelerometro:" );
+
+
+   lay.AddChild( txt );
+
+
+   app.AddLayout( lay );
+
+
+
+
+
+
+
+   sns = app.CreateSensor( "Accelerometer" );
+
+
+   sns.SetOnChange( sns_OnChange );
+
+
+   sns.Start();
+
+
+   setInterval(sendToAPI, 10000);
+
+
+}
+
+~~~
+
