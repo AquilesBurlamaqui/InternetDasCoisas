@@ -8,6 +8,7 @@
 
 - Sublime Text 3
 - DroidScript 
+- ThingSpeak
 
 ### Materiais 
 - Smartphone Moto X4
