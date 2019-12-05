@@ -32,4 +32,4 @@ function sns_OnChange( x, y, z, time )
 {
   txt.SetText( "x="+x + "\n y="+y + "\n z="+z );
 }
-’’’
+‘‘‘
