@@ -77,3 +77,4 @@ function OnStart()
 }
 ~~~
 
+Enquanto a aplicação é executada no dispositivo móvel os dados do eixo x são atualizados. O código implementado no celular é o [Código](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto2/2019.2/MarcosTeixeira/codigo02.js). A página web hospedada no 000webhost é [Projeto 02](https://projetosiot.000webhostapp.com/projeto02.html).
