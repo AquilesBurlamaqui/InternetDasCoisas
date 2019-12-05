@@ -13,7 +13,8 @@
 ### Materiais 
 - Smartphone Moto X4
 
-‘‘‘
+
+~~~javascript
 function OnStart()
 {
   lay = app.CreateLayout( "Linear", "VCenter,FillXY" );
@@ -32,4 +33,5 @@ function sns_OnChange( x, y, z, time )
 {
   txt.SetText( "x="+x + "\n y="+y + "\n z="+z );
 }
-‘‘‘
+~~~
+
