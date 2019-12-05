@@ -36,4 +36,29 @@ function sns_OnChange( x, y, z, time )
 }
 ~~~
 
+Em seguida, foi criada um canal no thingspeak intitulado “Uso do sensor”.  O objetivo é que seja gerado um gráfico com os valores do eixo x do acelerômetro. Após a criação do canal desenvolveu se uma página em HTML para visualização do gráfico.
+
+~~~html
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Projeto 02</title>
+        <script>
+        </script>
+    </head>
+
+    <body>
+    
+        <h1> Valor de X </h1>
+        <h2> Acelerômetro </h2>
+        <p> Recebe dados do sensor do Moto X4 </p>
+
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/890106/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Valor+de+X+&type=spline&xaxis=Tempo&yaxis=Valor&yaxismax=0.01"></iframe>
+
+    </body>
+ 
+</html>
+
+~~~ 
 
