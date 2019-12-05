@@ -13,6 +13,7 @@
 ### Materiais 
 - Smartphone Moto X4
 
+Inicialmente, foi feita a instalação e a pesquisa nas referências do DroidScript para obtenção do código que recebe os dados do acelerômetro. O código abaixo é o modelo disponibilizado pela aplicação.
 
 ~~~javascript
 function OnStart()
@@ -34,4 +35,5 @@ function sns_OnChange( x, y, z, time )
   txt.SetText( "x="+x + "\n y="+y + "\n z="+z );
 }
 ~~~
+
 
