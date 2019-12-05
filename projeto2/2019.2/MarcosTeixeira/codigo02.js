@@ -15,7 +15,6 @@ function OnStart()
     sns = app.CreateSensor( "Accelerometer" );
     sns.SetOnChange( sns_OnChange );
     sns.Start();
-    //A cada dez segundos
     setInterval(sendToAPI, 10000);
 }
 
@@ -32,7 +31,7 @@ function sendToAPI()
   http.onload = setAceText(http.responseText, x)
 }
 
-function setAceText(resp,lux) 
+function setAceText(resp,x) 
 {
     txt.SetText( "x=" + x );
 }
