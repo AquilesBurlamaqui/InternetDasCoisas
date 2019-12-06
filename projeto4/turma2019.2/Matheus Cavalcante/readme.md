@@ -129,4 +129,6 @@ EnviaInformacoesThingspeak(FieldUmidade);
 delay(1000); 
 } 
 ```
--Exemplo do meu projeto em 
+-Exemplo do meu projeto em Funcionamento.
+https://thingspeak.com/channels/900038/charts/1?bgcolor=%23ffffff&color=%23d6 2020&dynamic=true&results=60&type=line&update=15 
+
