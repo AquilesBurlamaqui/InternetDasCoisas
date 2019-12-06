@@ -19,6 +19,17 @@ O iot.php será usado para visualização e acesso da tabela. Colocamos os dados
       $dbname = "id11678197_iot2019";
 ~~~
 
+O api.php será empregado para receber os dados do acelerômetro do smartphone Moto X4.
+~~~sql
+<?php
+error_reporting(~E_WARNING & ~E_NOTICE);
+ 
+  $servername = "localhost";
+  $username = "id11678197_iot2019";
+  $password = "12345";
+  $dbname = "id11678197_iot2019";
+~~~
+
 O arquivo graficos.php é responsável pela exibição do gráfico, a partir da biblioteca Chart.js emprega em criação de design em aplicações web. 
 
 Tendo como base o código da disciplina, substituiu-se a url para http://projetosiot.000webhostapp.com/api.php/lux_sensor. Direcionado para a tabela criada no primeiro passo.
