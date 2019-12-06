@@ -11,6 +11,7 @@ DB Host: localhost
 
 Baseando-se no tutorial disponibilizado no Github da disciplina foram criados os arquivos graficos.php, api.php e iot.php.
 
+O iot.php será usado para visualização e acesso da tabela. Colocamos os dados como username e senha.  
 ~~~sql
       $servername = "localhost";
       $username = "id11678197_iot2019";
