@@ -122,3 +122,6 @@ MQTT.publish(TOPIC_PUBLISH, dados);
 delay(5000); //GET Data at every 5 seconds
 }
 ```
+        -Valores que o Broker está recebedo, Logo após o Assinante, se escrever no topico "SensorECT".
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/Matheus%20Cavalcante/Screenshot_20191205-203336.png).
