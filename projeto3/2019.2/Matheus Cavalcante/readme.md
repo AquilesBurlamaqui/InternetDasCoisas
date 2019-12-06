@@ -195,3 +195,16 @@ mysqli_close($link);
   </body>
 </html>
 ```
+
+	Por fim, agora seja podemos alimentar o banco de dados e o gráfico, sem necessidar do thingspeak.
+	
+	- Foto do grafico em Funcionamento.
+
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto3/2019.2/Matheus%20Cavalcante/Foto%20de%20Matheus%20Cavalcante.jpg).
+
+	-link para o meu Grafico.
+
+	https://matheuscavalcante.000webhostapp.com/graficos.php
+
+
+
