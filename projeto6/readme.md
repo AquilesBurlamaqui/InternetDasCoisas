@@ -10,7 +10,7 @@ Clicar em catalogo e procurar por Node-RED e cadastre o módulo com os dados do 
 Exemplo de Conta criada:
 https://aquiles.mybluemix.net
 
-**Obs.: Para visualizar o catálogo, atualize a página, caso não encontre a aba "Painel", relogue no BlueMix para que o catálogo seja ativado.**
+**Obs.: Caso não consiga visualizar o catálogo, atualize a página, se não resolver, relogue no BlueMix para que o catálogo seja ativado.**
 
 Após adicionar o catálogo do Node-RED, é necessário ativar o módulo, para iniciar devemos clicar na aba "Apps do Cloud Foundry" no painel inicial.
 ![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Luiz%20Henrique/painel.png)
