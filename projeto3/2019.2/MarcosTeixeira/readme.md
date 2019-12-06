@@ -11,7 +11,12 @@ DB Host: localhost
 
 Baseando-se no tutorial disponibilizado no Github da disciplina foram criados os arquivos graficos.php, api.php e iot.php.
 
-O 
+~~~sql
+      $servername = "localhost";
+      $username = "id11678197_iot2019";
+      $password = "12345";
+      $dbname = "id11678197_iot2019";
+~~~
 
 O arquivo graficos.php é responsável pela exibição do gráfico, a partir da biblioteca Chart.js emprega em criação de design em aplicações web. 
 
