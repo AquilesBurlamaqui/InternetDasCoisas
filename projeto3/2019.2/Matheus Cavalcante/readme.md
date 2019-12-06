@@ -1,3 +1,17 @@
+Projeto 3, o intuito desse projeto é gerar um gráfico, utilizando o sensor de luminosidade do celular, porém, diferente do projeto 2, sem a dependência dos gráficos do ThingSpeak. 
+
+Primeiro criamos uma conta no site WebHost, logo após um banco de dados no mesmo. Com o nome iot, o bando gerado foi id10512316_iot. O banco de dados ficava responsável por receber e armazenar os dados do sensor.
+Depois foram criados 3 códigos no WebHost, que seriam necessário para o objetivo final, que é gerar um gráfico que mostraria os valores recebidos e armazenados na tabela. Que são eles o iot.php , api.php, graficos.php, os códigos estão logo abaixo, e todos foram disponibilizados pelo professor. Pequenas mudanças foram feitas neles, como Nome do banco e senha.
+
+- O que é um API ?
+  API é o acrônimo de Application Programming Interface ou, em português, Interface de Programação de Aplicativos. API é o conjunto de padrões de programação que permite a construção de aplicativos e a sua utilização de maneira não tão evidente para os usuários.
+	
+
+
+
+
+ - Codido do iot.php
+
 ```php
 <html>
  
@@ -42,8 +56,8 @@
 
 
 
-
-
+ -Codigo do api.php
+ 
 ```php
 <?php
 error_reporting(~E_WARNING & ~E_NOTICE);
@@ -119,9 +133,7 @@ mysqli_close($link);
 ```
 
 
-
-
-
+ -codigo do graficos.php
 
 ```php
 <!DOCTYPE html>
