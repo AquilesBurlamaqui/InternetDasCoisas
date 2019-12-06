@@ -2,7 +2,7 @@
 
 O primeiro passo consistiu em instalar o aplicativo MyMQTT em um smartphone Android. Posteriormente, foram feitas as configurações para o test.mosquitto.org na porta 1883.
 
-O código de referência precisou ser alterado em relação as informações sobre a rede wi-fi e as informações do MQTT server.
+O código de referência precisou ser alterado em relação as informações sobre a rede wi-fi e MQTT server.
 ~~~
 //WiFi
 const char* SSID = "UFRN";
@@ -17,4 +17,5 @@ int BROKER_PORT = 1883;
 PubSubClient MQTT(wifiClient);  
 ~~~
 
+Dados da umidade recebidos no smartphone:
 ![Dados sendo recebidos no smartphone](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto5/2019.2/MarcosTeixeira/tela.jpeg)
