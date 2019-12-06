@@ -2,4 +2,4 @@ No projeto 4 eu substituir o sensor do celular, por um sensor de UMIDADE TERREST
 
 -O Esp8266 é um Módulo WiFi ESP8266 NodeMcu ESP-12. O módulo Wifi ESP8266 NodeMCU é uma placa de desenvolvimento que combina o chip ESP8266, uma interface usb-serial e um regulador de tensão 3.3V. Utilizando a comunicação via cabo micro-usb. 
 
-![Alt Text](https://drive.google.com/drive/folders/1iT0BAxGnHEjRCC4nxvDRrvwte-_cwkSI).
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.2/Matheus%20Cavalcante/Proje4.png.jpeg).
