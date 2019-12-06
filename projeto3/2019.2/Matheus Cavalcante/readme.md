@@ -10,7 +10,7 @@ Depois foram criados 3 códigos no WebHost, que seriam necessário para o objeti
 
 
 
- - Codido do iot.php
+ -Codido do iot.php
 
 ```php
 <html>
@@ -56,7 +56,7 @@ Depois foram criados 3 códigos no WebHost, que seriam necessário para o objeti
 
 
 
- -Codigo do api.php
+  -Codigo do api.php
  
 ```php
 <?php
@@ -133,7 +133,7 @@ mysqli_close($link);
 ```
 
 
- -codigo do graficos.php
+   -codigo do graficos.php
 
 ```php
 <!DOCTYPE html>
