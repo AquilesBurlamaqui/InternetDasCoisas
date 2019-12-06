@@ -16,3 +16,5 @@ int BROKER_PORT = 1883;
 #define TOPIC_PUBLISH "SensorECT"   
 PubSubClient MQTT(wifiClient);  
 ~~~
+
+![Dados sendo recebidos no smartphone](InternetDasCoisas/projeto5/2019.2/MarcosTeixeira/tela.jpeg)
