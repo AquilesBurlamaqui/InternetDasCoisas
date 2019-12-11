@@ -5,10 +5,10 @@ Primeiro utilizamos um Mqttin(que se inscreve no broker) e em seguida um nó Deb
 
 **Nós de entrada e saida e ao lado as mensagens recebidas**
 
-![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/nodered.png)
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/2019.2/Pedro/nodered.png)
 **Publicando no broker**
 
-![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/IMG_1865.PNG)
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/2019.2/Pedro/IMG_1865.PNG)
 **Recebendo os dados do broker**
 
-![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/turma%202019.2/Pedro/IMG_1866.PNG)
+![Alt Text](https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto6/2019.2/Pedro/IMG_1866.PNG)
