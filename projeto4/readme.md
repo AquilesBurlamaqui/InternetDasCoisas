@@ -1,24 +1,24 @@
 # Projeto 4 - Utilização do NODEMCU+sensores em substituição dos sensores do celular
 ### LDR 
 
-[Sensor de Luz - LDR](ldr.md)
+[Sensor de Luz - LDR](Resources/ldr.md)
 
 ### Sensor de Temperatura
 
-[Sensor de Temperatura - Thermistor](thermistor.md)
+[Sensor de Temperatura - Thermistor](Resources/thermistor.md)
 
-### Sensor de umidade
+### Sensor de Umidade
 
-[Sensor de umidade](Umidade.md)
+[Sensor de umidade](Resources/umidade.md)
 
 ## Sensor de Água
 https://ltlemur04.wixsite.com/roboticnation/single-post/2017/12/10/Arduino-Water-Sensor-Set-Up-and-Programming
 
-## Sensor de distância
-[Sensor Ultrasônico](Rafael/ultrasonic.md)
+## Sensor de Distância
+[Sensor Ultrasônico](2019.1/Rafael/ultrasonic.md)
 
-## Sensor infravermelho
-[Sensor infravermelho](turma2019.1/Bruno/readme.md)
+## Sensor Infravermelho
+[Sensor infravermelho](2019.1/Bruno/readme.md)
 
 ## Display Oled 0.9 Branco Gráfico I2c 128x64
 
