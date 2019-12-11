@@ -12,7 +12,9 @@ No presente projeto, vamos utilizar um Broker, que disponibiliza tal serviço de
 
 ## Passo 1 - Instalar a biblioteca no IDE Arduino pubsubclient
 
-[pubsubclient](pubsubclient.zip)
+[Exemplo MQTT](Resources/mqtt.zip)
+
+[Pubsub Client](Resources/pubsubclient.zip)
 
 ## Passo 2 - Adicionar o código base na IDE Arduino
 
