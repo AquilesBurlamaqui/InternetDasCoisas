@@ -3,7 +3,7 @@
 O sensor é capaz de mensurar temperatura e umidade relativa da terra. O projeto Planta IoT com ESP8266 NodeMCU consiste em fazer o NodeMCU enviar, a cada trinta segundos, a umidade percentual medida para um canal do ThingSpeak. 
 
 <p align="center">
- <img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/turma2019.1/Alexandre/SensorUmidade.jpg" width="350" title="hover text">
+ <img src="https://github.com/AquilesBurlamaqui/InternetDasCoisas/blob/master/projeto4/2019.1/Alexandre/SensorUmidade.jpg" width="350" title="hover text">
 </p>
 
   
